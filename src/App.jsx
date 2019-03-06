@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import Header from './shared/components/header/header';
+import Header from './shell/components/header/header';
 
 class App extends Component {
   render() {
