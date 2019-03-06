@@ -2,7 +2,7 @@
 // Shared route constants for LosTRAGOS.com
 //
 
-const ROUTE_CONSTANTS = {
+export const ROUTE_CONSTANTS = {
   SHELL: {
     NO_CONTENT: { path: '**'}
   },
@@ -37,5 +37,3 @@ const ROUTE_CONSTANTS = {
     }
   }
 }
-
-export default ROUTE_CONSTANTS;
