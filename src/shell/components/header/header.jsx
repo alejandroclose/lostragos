@@ -3,22 +3,23 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 // Components
-import Navigation from './navigation/navigation';
+import Brand from './brand/brand';
+import Navbar from './navbar/navbar';
 
 const HeaderWrapper = styled.div`
-  width: 100vw;
-  background: grey;
+  height: 3rem;
+  background: rgba(0, 0, 0, 0.2);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 class Header extends Component {
   render() {
     return (
       <HeaderWrapper>
-        <div>
-          LOGO
-        </div>
-        <Navigation></Navigation>
+        <Brand />
+        <Navbar />
       </HeaderWrapper>
     );
   }

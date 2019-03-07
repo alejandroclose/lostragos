@@ -20,8 +20,8 @@ export const ROUTE_CONSTANTS = {
   },
   BEBIDAS_ESPIRITUOSAS: {
     BEBIDAS_ESPIRITUOSAS_MAIN: {
-      fullPath: '/bebidas-espirituosas',
-      path: 'bebidas-espirituosas'
+      fullPath: '/bebidas',
+      path: 'bebidas'
     }
   },
   ACADEMIA: {
