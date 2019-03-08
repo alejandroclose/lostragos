@@ -1,18 +1,12 @@
 // Dependencies
 import React from 'react';
-import styled from 'styled-components';
 
 // Components
 import NavbarElement from './navbarElement';
+import { NavigationWrapper } from './navbar.style';
 
 // Constants
 import { ROUTE_CONSTANTS } from '../../../../shared';
-
-const NavigationWrapper = styled.div`
-  display: flex;
-  height: 100%;
-  margin-right: 1rem;
-`;
 
 const Navbar = () => {
   return (

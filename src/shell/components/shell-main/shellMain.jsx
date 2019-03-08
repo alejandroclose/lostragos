@@ -1,21 +1,21 @@
 // Dependencies
 import React from 'react';
-import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 // Components
 import Header from '../header/header';
+import { ShellMainWrapper } from './shellMain.style'
 
-const ShellMainWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
-  background: papayawhip;
-`;
+// Constants
+import THEME from '../../../theme/theme';
 
 const ShellMain = (props) => (
-  <ShellMainWrapper>
-    <Header />
-    { props.children }
-  </ShellMainWrapper>
+  <ThemeProvider theme={THEME}>
+    <ShellMainWrapper>
+      <Header />
+      { props.children }
+    </ShellMainWrapper>
+  </ThemeProvider>
 );
 
 export default ShellMain;

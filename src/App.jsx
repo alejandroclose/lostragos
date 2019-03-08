@@ -5,15 +5,19 @@ import React, { Component } from 'react';
 import ShellMain from './shell/components/shell-main/shellMain';
 
 // Global styles
-import GlobalStyle from './global-styles';
+import GlobalStyle from './theme/global-styles';
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <GlobalStyle />
-        <ShellMain></ShellMain>
-      </React.Fragment>
+      <div>
+          <GlobalStyle />
+        <ShellMain>
+          <h1>
+            Hello, friend!
+          </h1>
+        </ShellMain>
+      </div>
     );
   }
 }
