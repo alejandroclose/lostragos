@@ -10,6 +10,8 @@ import { ROUTE_CONSTANTS } from '../../../../shared';
 
 const NavigationWrapper = styled.div`
   display: flex;
+  height: 100%;
+  margin-right: 1rem;
 `;
 
 const Navbar = () => {

@@ -4,13 +4,12 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const StyledNavLinkWrapper = styled.div`
-  height: 100%;
   display: flex;
   align-items: center;
   padding: 0 0.5rem;
   &:hover {
     background: rgba(0, 0, 0, 0.3);
-    transition: background 400ms ease-out;
+    transition: background 500ms ease-out;
   }
 `
 
