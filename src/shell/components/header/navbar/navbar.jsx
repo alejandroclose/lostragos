@@ -5,8 +5,6 @@ import React, { Component } from 'react';
 import NavbarElement from './navbarElement/navbarElement';
 import { NavbarWrapper } from './navbar.style';
 
-// Constants
-
 // Mocks
 import { MOCK_NAVBAR_ELEMENTS } from '../../../../mocks/mockNavbarElements';
 
@@ -16,6 +14,7 @@ class Navbar extends Component {
   };
 
   componentDidMount = () => {
+    // Loads mock data into state.
     this.setState({ mockNavbarElements: MOCK_NAVBAR_ELEMENTS });
   }
 
@@ -23,7 +22,7 @@ class Navbar extends Component {
     const { mockNavbarElements } = this.state;
 
     mockNavbarElements.forEach(navbarElement => {
-      if (clickedNavbarElement.isSubMenuOpen === false && clickedNavbarElement.id === navbarElement.id) {
+      if (clickedNavbarElement.id === navbarElement.id && !clickedNavbarElement.isSubMenuOpen) {
         navbarElement.isSubMenuOpen = true;
       } else {
         navbarElement.isSubMenuOpen = false;

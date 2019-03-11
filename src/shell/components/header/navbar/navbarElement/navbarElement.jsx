@@ -4,10 +4,10 @@ import React, { Component } from  'react';
 // Components
 import {
   StyledNavLinkWrapper,
-  StyledNavLink,
   SubMenuWrapper,
   SubMenuElement
 } from './navbarElement.style';
+import { Link } from 'react-router-dom';
 
 class NavbarElement extends Component {
 
@@ -16,9 +16,11 @@ class NavbarElement extends Component {
       {
         subMenu.map(subMenuElement => {
           return (
-            <SubMenuElement key={ subMenuElement.id }>
-              <StyledNavLink to={ subMenuElement.fullPath }>{ subMenuElement.name }</StyledNavLink>
-            </SubMenuElement>
+            <Link to={ subMenuElement.fullPath }>
+              <SubMenuElement key={ subMenuElement.id }>
+                { subMenuElement.name }
+              </SubMenuElement>
+            </Link>
           );
         })
       }
@@ -30,7 +32,7 @@ class NavbarElement extends Component {
     const navbarElement = this.props.data;
 
     return (
-      <StyledNavLinkWrapper onClick={ () => { handleToggle(navbarElement) }}>
+      <StyledNavLinkWrapper isActive={ navbarElement.isSubMenuOpen } onClick={ () => { handleToggle(navbarElement) }}>
         { navbarElement.name }
         {
           navbarElement.isSubMenuOpen && this.renderSubMenu(navbarElement.subMenu)

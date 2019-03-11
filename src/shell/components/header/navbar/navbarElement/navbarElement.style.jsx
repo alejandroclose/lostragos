@@ -8,9 +8,10 @@ export const StyledNavLinkWrapper = styled.div`
   height: 3rem;
   display: flex;
   align-items: center;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   color: #FFF;
   position: relative;
+  background: ${props => props.isActive && 'rgba(0, 0, 0, 0.3)'};
   &:hover {
     background: rgba(0, 0, 0, 0.3);
     transition: background 500ms ease-out;
@@ -23,19 +24,26 @@ export const StyledNavLinkWrapper = styled.div`
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
-  text-transform: uppercase;
   color: #FFF;
 `;
 
 export const SubMenuWrapper = styled.div`
   display: flex;
+  width: auto;
   flex-direction: column;
   position: absolute;
   top: 3rem;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
 `;
 
 export const SubMenuElement = styled.div`
+  padding: 0.75rem;
   color: #FFF;
+  border-bottom: 1px solid #FFFFFF22;
+  white-space: nowrap;
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 500ms ease-out;
+  }
 `;
