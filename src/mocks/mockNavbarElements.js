@@ -6,6 +6,7 @@ export const MOCK_NAVBAR_ELEMENTS = [
   {
     id: 1,
     name: 'Recetas',
+    isSubMenuOpen: false,
     subMenu: [
       {
         id: 11,
@@ -32,6 +33,7 @@ export const MOCK_NAVBAR_ELEMENTS = [
   {
     id: 2,
     name: 'Ocasiones',
+    isSubMenuOpen: false,
     subMenu: [
       {
         id: 21,
@@ -68,6 +70,7 @@ export const MOCK_NAVBAR_ELEMENTS = [
   {
     id: 3,
     name: 'Bebidas Espirituosas',
+    isSubMenuOpen: false,
     subMenu: [
       {
         id: 31,

@@ -2,7 +2,6 @@
 import React, { Component } from  'react';
 
 // Components
-import { Link } from 'react-router-dom';
 import {
   StyledNavLinkWrapper,
   StyledNavLink,
@@ -11,14 +10,6 @@ import {
 } from './navbarElement.style';
 
 class NavbarElement extends Component {
-  state = {
-    isOpen: false,
-  };
-
-  toggleOpenClose = () => {
-    const { isOpen } = this.state;
-    this.setState({ isOpen: !isOpen });
-  };
 
   renderSubMenu = (subMenu) => (
     <SubMenuWrapper>
@@ -35,14 +26,14 @@ class NavbarElement extends Component {
   );
 
   render() {
-    const { isOpen } = this.state;
+    const { handleToggle } = this.props;
     const navbarElement = this.props.data;
 
     return (
-      <StyledNavLinkWrapper onClick={ this.toggleOpenClose }>
+      <StyledNavLinkWrapper onClick={ () => { handleToggle(navbarElement) }}>
         { navbarElement.name }
         {
-          isOpen && this.renderSubMenu(navbarElement.subMenu)
+          navbarElement.isSubMenuOpen && this.renderSubMenu(navbarElement.subMenu)
         }
       </StyledNavLinkWrapper>
     );
