@@ -4,8 +4,7 @@ import styled from 'styled-components';
 // Components
 import { NavLink } from 'react-router-dom';
 
-
-export const NavigationWrapper = styled.div`
+export const NavbarWrapper = styled.div`
   display: flex;
   height: 100%;
   margin-right: 1rem;
@@ -25,4 +24,8 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   text-transform: uppercase;
   color: #FFF;
+
+  @media screen and (max-width: ${props => props.theme.sizeTablet}){
+    display: none;
+  }
 `;

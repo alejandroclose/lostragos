@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ShellMainWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: papayawhip;
 `;

@@ -3,12 +3,13 @@ import React from 'react';
 
 // Components
 import { Link } from 'react-router-dom';
+import { StyledImg } from '../../../../shared';
 
 const brandHorizontal = require('../../../../assets/images/logo-horizontal-navbar.svg');
 
 const Brand = () => (
     <Link to="/">
-      <img src={brandHorizontal} alt="losTRAGOS.com logo"></img>
+      <StyledImg src={brandHorizontal} alt="losTRAGOS.com logo"></StyledImg>
     </Link>
 );
 

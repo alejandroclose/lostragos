@@ -3,14 +3,14 @@ import React from 'react';
 
 // Components
 import NavbarElement from './navbarElement';
-import { NavigationWrapper } from './navbar.style';
+import { NavbarWrapper } from './navbar.style';
 
 // Constants
 import { ROUTE_CONSTANTS } from '../../../../shared';
 
 const Navbar = () => {
   return (
-    <NavigationWrapper>
+    <NavbarWrapper>
       <NavbarElement uppercase to={ ROUTE_CONSTANTS.RECETAS.RECETAS_MAIN.fullPath }>
         Recetas
       </NavbarElement>
@@ -26,7 +26,7 @@ const Navbar = () => {
       <NavbarElement uppercase to={ ROUTE_CONSTANTS.LOGIN.LOGIN_MAIN.fullPath }>
         Acceder
       </NavbarElement>
-    </NavigationWrapper>
+    </NavbarWrapper>
   );
 }
 
