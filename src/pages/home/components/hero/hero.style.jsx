@@ -14,4 +14,5 @@ export const HeroWrapper = styled.div`
 
 export const HeroLogoWrapper = styled.div`
   width: 50%;
+  margin-top: 3.5rem;
 `;
