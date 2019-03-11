@@ -3,17 +3,18 @@ import React, { Component } from 'react';
 
 // Components
 import ShellMain from './shell/components/shell-main/shellMain';
+import { Home } from './pages';
 
 // Global styles
-import GlobalStyle from './global-styles';
+import GlobalStyle from './theme/global-styles';
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <ShellMain>
         <GlobalStyle />
-        <ShellMain></ShellMain>
-      </React.Fragment>
+        <Home />
+      </ShellMain>
     );
   }
 }

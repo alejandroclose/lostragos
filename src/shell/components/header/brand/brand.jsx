@@ -1,16 +1,16 @@
 // Dependencies
 import React from 'react';
-import styled from 'styled-components';
+
+// Components
+import { Link } from 'react-router-dom';
+import { StyledImg } from '../../../../shared';
 
 const brandHorizontal = require('../../../../assets/images/logo-horizontal-navbar.svg');
 
-const BrandWrapper = styled.div`
-`
-
 const Brand = () => (
-  <BrandWrapper>
-    <img src={brandHorizontal} alt="LosTRAGOS.com logo"></img>
-  </BrandWrapper>
+    <Link to="/">
+      <StyledImg src={brandHorizontal} alt="losTRAGOS.com logo"></StyledImg>
+    </Link>
 );
 
 export default Brand;
