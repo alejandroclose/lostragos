@@ -4,7 +4,7 @@ export const HeaderWrapper = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0.75rem;
+  /* padding: 0.75rem; */
   background: rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid #FFFFFF55;
   display: flex;
