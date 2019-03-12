@@ -8,7 +8,14 @@ const THEME = {
   sizeDesktop: '1024px',
 
   // Colors
-  colorHighlight: '#d02936'
+    // General
+    colorHighlight: '#d02936',
+
+    // Header/Navbar
+    colorHeaderFont: '#FFF',
+    colorHeaderBackground: 'rgba(0, 0, 0, 0.2)',
+    colorHeaderBackgroundActive: 'rgba(0, 0, 0, 0.3)',
+    colorHeaderBorder: 'rgba(255, 255, 255, 0.25)'
 }
 
 export default THEME;

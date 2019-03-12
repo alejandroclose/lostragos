@@ -16,8 +16,8 @@ class NavbarElement extends Component {
       {
         subMenu.map(subMenuElement => {
           return (
-            <Link to={ subMenuElement.fullPath }>
-              <SubMenuElement key={ subMenuElement.id }>
+            <Link key={ subMenuElement.id } to={ subMenuElement.fullPath }>
+              <SubMenuElement >
                 { subMenuElement.name }
               </SubMenuElement>
             </Link>

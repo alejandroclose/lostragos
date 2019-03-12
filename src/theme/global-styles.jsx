@@ -1,7 +1,7 @@
 // Dependencies
 import { createGlobalStyle } from 'styled-components';
 
-import styles from '../assets/styles/destyle.scss';
+import styles from 'assets/styles/destyle.scss';
 
 const GlobalStyle = createGlobalStyle`
   html {

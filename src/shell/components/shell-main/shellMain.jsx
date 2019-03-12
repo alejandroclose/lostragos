@@ -7,7 +7,7 @@ import Header from '../header/header';
 import { ShellMainWrapper } from './shellMain.style'
 
 // Constants
-import THEME from '../../../theme/theme';
+import THEME from 'theme/theme';
 
 const ShellMain = (props) => (
   <ThemeProvider theme={THEME}>

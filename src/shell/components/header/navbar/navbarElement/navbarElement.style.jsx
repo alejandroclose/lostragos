@@ -4,16 +4,15 @@ import styled from 'styled-components';
 // Components
 import { NavLink } from 'react-router-dom';
 
-export const StyledNavLinkWrapper = styled.div`
-  height: 3rem;
+export const StyledNavLinkWrapper = styled.button`
   display: flex;
   align-items: center;
-  padding: 0 1rem;
-  color: #FFF;
   position: relative;
-  background: ${props => props.isActive && 'rgba(0, 0, 0, 0.3)'};
+  height: 3rem;
+  padding: 0 1rem;
+  background: ${props => props.isActive && props.theme.colorHeaderBackgroundActive};
   &:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: ${props => props.theme.colorHeaderBackgroundActive};
     transition: background 500ms ease-out;
   }
 
@@ -24,26 +23,26 @@ export const StyledNavLinkWrapper = styled.div`
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
-  color: #FFF;
 `;
 
 export const SubMenuWrapper = styled.div`
   display: flex;
-  width: auto;
   flex-direction: column;
   position: absolute;
   top: 3rem;
   left: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: ${props => props.theme.colorHeaderBackground};
 `;
 
 export const SubMenuElement = styled.div`
   padding: 0.75rem;
-  color: #FFF;
-  border-bottom: 1px solid #FFFFFF22;
   white-space: nowrap;
+  /* border-bottom: 1px solid ${props => props.theme.colorHeaderBorder}; */
   &:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: ${props => props.theme.colorHeaderBackgroundActive};
     transition: background 500ms ease-out;
+  }
+  &:last-child {
+    border-bottom: none;
   }
 `;

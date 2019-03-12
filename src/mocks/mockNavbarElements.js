@@ -99,7 +99,7 @@ export const MOCK_NAVBAR_ELEMENTS = [
       },
       {
         id: 36,
-        name: 'Congac',
+        name: 'Cognac',
         fullPath: '/categoria/cognac'
       },
       {

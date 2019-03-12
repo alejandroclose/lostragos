@@ -4,10 +4,10 @@ import React from 'react';
 // Components
 import { Link } from 'react-router-dom';
 import { CallToActionWrapper } from './callToAction.style';
-import { Button } from '../../../../../shared';
+import { Button } from 'shared';
 
 // Constants
-import { ROUTE_CONSTANTS } from '../../../../../shared';
+import { ROUTE_CONSTANTS } from 'shared';
 
 const CallToAction = () => (
   <CallToActionWrapper>
