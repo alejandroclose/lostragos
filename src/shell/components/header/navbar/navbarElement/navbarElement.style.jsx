@@ -2,9 +2,8 @@
 import styled from 'styled-components';
 
 // Components
-import { NavLink } from 'react-router-dom';
 
-export const StyledNavLinkWrapper = styled.button`
+export const StyledNavElementWrapper = styled.button`
   display: flex;
   align-items: center;
   position: relative;
@@ -19,10 +18,6 @@ export const StyledNavLinkWrapper = styled.button`
   @media screen and (max-width: ${props => props.theme.sizeTablet}){
     display: none;
   }
-`;
-
-export const StyledNavLink = styled(NavLink)`
-  text-decoration: none;
 `;
 
 export const SubMenuWrapper = styled.div`

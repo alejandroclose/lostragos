@@ -1,5 +1,6 @@
 // Dependencies
 import React, { Component } from 'react';
+import { ReactDOM } from 'react-dom';
 
 // Components
 import NavbarElement from './navbarElement/navbarElement';
@@ -16,18 +17,19 @@ class Navbar extends Component {
   componentDidMount = () => {
     // Loads mock data into state.
     this.setState({ mockNavbarElements: MOCK_NAVBAR_ELEMENTS });
-  }
+  };
 
-  toggleSubMenus = (clickedNavbarElement) => {
+  toggleSubMenus = (clickedNavbarElement = null) => {
+    console.log('Toggle submenus');
     const { mockNavbarElements } = this.state;
 
-    mockNavbarElements.forEach(navbarElement => {
-      if (clickedNavbarElement.id === navbarElement.id && !clickedNavbarElement.isSubMenuOpen) {
-        navbarElement.isSubMenuOpen = true;
-      } else {
-        navbarElement.isSubMenuOpen = false;
-      }
-    });
+      mockNavbarElements.forEach(navbarElement => {
+        if (clickedNavbarElement && clickedNavbarElement.id === navbarElement.id && !clickedNavbarElement.isSubMenuOpen) {
+          navbarElement.isSubMenuOpen = true;
+        } else {
+          navbarElement.isSubMenuOpen = false;
+        }
+      });
     this.setState({ mockNavbarElements });
   }
 
