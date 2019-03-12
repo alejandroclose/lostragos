@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 // Components
-import { StyledLink } from '../../../shared';
+import { StyledLink } from '../../../shared/components/styledLink';
 
 // Constants
-import { ROUTE_CONSTANTS } from '../../../shared';
+import { ROUTE_CONSTANTS } from 'shared';
 
 const FooterWrapper = styled.div`
     background: black;

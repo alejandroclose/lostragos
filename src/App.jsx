@@ -1,16 +1,19 @@
+// Dependencies
 import React, { Component } from 'react';
-import './App.scss';
+// Components
+import ShellMain from './shell/components/shell-main/shellMain';
+import { Home } from './pages';
 
-import Header from './shell/components/header/header';
-import Footer from './shell/components/footer/footer';
+// Global styles
+import GlobalStyle from './theme/global-styles';
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Header />
-        <Footer/>
-      </React.Fragment>
+      <ShellMain>
+        <GlobalStyle />
+        <Home />
+      </ShellMain>
     );
   }
 }
