@@ -1,22 +1,23 @@
 // Dependencies
 import styled from 'styled-components';
 
-// Components
+// Media queries
+import { device } from 'theme/device';
 
 export const StyledNavElementWrapper = styled.button`
-  display: flex;
+  display: none;
   align-items: center;
   position: relative;
   height: 3rem;
   padding: 0 1rem;
-  background: ${props => props.isActive && props.theme.colorHeaderBackgroundActive};
+  background: ${props => props.isActive && props.theme.color.header.backgroundActive};
   &:hover {
-    background: ${props => props.theme.colorHeaderBackgroundActive};
+    background: ${props => props.theme.color.header.backgroundActive};
     transition: background 500ms ease-out;
   }
 
-  @media screen and (max-width: ${props => props.theme.sizeTablet}){
-    display: none;
+  @media ${device.tablet} {
+    display: flex;
   }
 `;
 
@@ -26,7 +27,7 @@ export const SubMenuWrapper = styled.div`
   position: absolute;
   top: 3rem;
   left: 0;
-  background: ${props => props.theme.colorHeaderBackground};
+  background: ${props => props.theme.color.header.background};
 `;
 
 export const SubMenuElement = styled.div`
@@ -34,7 +35,7 @@ export const SubMenuElement = styled.div`
   white-space: nowrap;
   /* border-bottom: 1px solid ${props => props.theme.colorHeaderBorder}; */
   &:hover {
-    background: ${props => props.theme.colorHeaderBackgroundActive};
+    background: ${props => props.theme.color.header.backgroundActive};
     transition: background 500ms ease-out;
   }
   &:last-child {

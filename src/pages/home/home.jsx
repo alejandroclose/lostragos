@@ -5,5 +5,16 @@ import React from 'react';
 import Hero from './components/hero/hero';
 
 export const Home = () => (
-  <Hero />
+  <div>
+    <Hero />
+    <section>
+      <h1>Section 1</h1>
+    </section>
+    <section>
+      <h1>Section 2</h1>
+    </section>
+    <section>
+      <h1>Section 3</h1>
+    </section>
+  </div>
 );

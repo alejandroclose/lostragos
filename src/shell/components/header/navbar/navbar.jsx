@@ -1,6 +1,5 @@
 // Dependencies
 import React, { Component } from 'react';
-import { ReactDOM } from 'react-dom';
 
 // Components
 import NavbarElement from './navbarElement/navbarElement';
@@ -20,7 +19,6 @@ class Navbar extends Component {
   };
 
   toggleSubMenus = (clickedNavbarElement = null) => {
-    console.log('Toggle submenus');
     const { mockNavbarElements } = this.state;
 
       mockNavbarElements.forEach(navbarElement => {

@@ -1,8 +1,12 @@
 // Dependencies
 import styled from 'styled-components';
 
+// Media queries
+import { device } from 'theme/device';
+
 export const BrandWrapper = styled.div`
-  @media screen and (max-width: ${props => props.theme.sizeTablet}) {
-    display: none;
+  display: none;
+  @media ${device.tablet} {
+    display: block;
   }
 `;

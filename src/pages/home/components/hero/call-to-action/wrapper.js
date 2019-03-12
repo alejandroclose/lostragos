@@ -1,14 +1,16 @@
 // Dependencies
 import styled from 'styled-components';
 
-export const CallToActionWrapper = styled.div`
+// Components
+
+const Wrapper = styled.div`
   width: 100%;
+  position: absolute;
+  bottom: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  h3 {
-    color: #FFF;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
+  text-align: center;
 `;
+
+export default Wrapper;

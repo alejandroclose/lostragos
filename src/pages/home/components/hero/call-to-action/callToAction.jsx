@@ -3,19 +3,20 @@ import React from 'react';
 
 // Components
 import { Link } from 'react-router-dom';
-import { CallToActionWrapper } from './callToAction.style';
 import { Button } from 'shared';
+import Wrapper from './wrapper';
+import Title from './title';
 
 // Constants
 import { ROUTE_CONSTANTS } from 'shared';
 
 const CallToAction = () => (
-  <CallToActionWrapper>
-    <h3>DESCUBRE AL BARMAN QUE LLEVAS DENTRO</h3>
+  <Wrapper>
+    <Title>DESCUBRE AL BARMAN QUE LLEVAS DENTRO</Title>
     <Link to={ ROUTE_CONSTANTS.RECETAS.RECETAS_MAIN.fullPath }>
       <Button>Ver todas las recetas</Button>
     </Link>
-  </CallToActionWrapper>
+  </Wrapper>
 );
 
 export default CallToAction;
