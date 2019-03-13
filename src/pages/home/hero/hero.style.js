@@ -8,11 +8,11 @@ export const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
 `;
 
 export const BackgroundImg = styled.img`
   position: absolute;
+  top: 0;
   object-fit: cover;
   height: 100%;
   width: 100%;
