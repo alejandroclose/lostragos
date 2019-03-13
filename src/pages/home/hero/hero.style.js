@@ -8,8 +8,12 @@ export const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
 `;
+
+export const Content = styled.div`
+
+`
 
 export const BackgroundImg = styled.img`
   position: absolute;
@@ -17,21 +21,21 @@ export const BackgroundImg = styled.img`
   height: 100%;
   width: 100%;
   z-index: -1;
+  opacity: 0.75;
 `;
 
 export const LogoWrapper = styled.div`
-  width: 75%;
-  margin-top: 3.5rem;
-
-  @media ${device.tablet} {
-    width: 50%;
-  }
-
-  @media ${device.laptop} {
-    width: 33%;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 15vh;
 `;
 
 export const Logo = styled.img`
-  width: 100%;
+  max-width: 40%;
+
+  @media ${device.tablet} {
+    max-width: 15rem;
+  }
 `;
