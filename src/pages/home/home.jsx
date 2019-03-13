@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components
-import Hero from './components/hero/hero';
+import Hero from './hero/hero';
 
 export const Home = () => (
   <div>
