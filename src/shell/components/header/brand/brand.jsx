@@ -3,17 +3,19 @@ import React from 'react';
 
 // Components
 import { Link } from 'react-router-dom';
-import { StyledImg } from 'shared';
-import { BrandWrapper } from './brand.style';
+import {
+  Wrapper,
+  Img,
+ } from './brand.style';
 
-const brandHorizontal = require('assets/images/logo-horizontal-navbar.svg');
+const brandHorizontal = require('assets/images/los-tragos-brand-white-small.png');
 
 const Brand = () => (
-  <BrandWrapper>
+  <Wrapper>
     <Link to="/">
-      <StyledImg src={brandHorizontal} alt="losTRAGOS.com logo"></StyledImg>
+      <Img src={brandHorizontal} alt="losTRAGOS.com logo"></Img>
     </Link>
-  </BrandWrapper>
+  </Wrapper>
 );
 
 export default Brand;

@@ -2,11 +2,11 @@
 import React from 'react';
 
 // Components
-import { StyledImg } from 'shared';
 import {
-  HeroWrapper,
-  HeroImage,
-  HeroLogoWrapper
+  Wrapper,
+  BackgroundImg,
+  LogoWrapper,
+  Logo
 } from './hero.style';
 import CallToAction from './call-to-action/callToAction';
 
@@ -15,13 +15,13 @@ const heroBackground = require('assets/images/hero-background.jpg');
 const heroLogo = require('assets/images/lostragos-hero-logo.png');
 
 const Hero = () => (
-  <HeroWrapper>
-    <HeroImage src={ heroBackground } />
-    <HeroLogoWrapper>
-      <StyledImg src={ heroLogo } alt="losTRAGOS.com logo" />
-    </HeroLogoWrapper>
+  <Wrapper>
+    <BackgroundImg src={ heroBackground } />
+    <LogoWrapper>
+      <Logo src={ heroLogo } alt="losTRAGOS.com logo" />
+    </LogoWrapper>
     <CallToAction />
-  </HeroWrapper>
+  </Wrapper>
 );
 
 export default Hero;

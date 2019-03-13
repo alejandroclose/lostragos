@@ -1,9 +1,7 @@
 // Dependencies
 import styled from 'styled-components';
 
-// Components
-
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   width: 100%;
   position: absolute;
   bottom: 20%;
@@ -13,4 +11,9 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 
-export default Wrapper;
+export const Title = styled.h3`
+  margin-bottom: 1rem;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1rem;
+`;

@@ -4,8 +4,10 @@ import React from 'react';
 // Components
 import { Link } from 'react-router-dom';
 import { Button } from 'shared';
-import Wrapper from './wrapper';
-import Title from './title';
+import {
+  Wrapper,
+  Title
+} from './callToAction.style';
 
 // Constants
 import { ROUTE_CONSTANTS } from 'shared';
