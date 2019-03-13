@@ -11,10 +11,6 @@ export const Wrapper = styled.div`
   position: relative;
 `;
 
-export const Content = styled.div`
-
-`
-
 export const BackgroundImg = styled.img`
   position: absolute;
   object-fit: cover;
