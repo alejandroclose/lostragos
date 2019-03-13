@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 // Components
-import ShellMain from './shell/components/shell-main/shellMain';
+import ShellMain from './shell/shell-main/shellMain';
 import { Home } from './pages';
 
 // Global styles
