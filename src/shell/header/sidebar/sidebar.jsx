@@ -4,11 +4,16 @@ import React, { Component } from 'react';
 // Components
 import {
   Icon,
-  Wrapper
+  Wrapper,
+  Brand
 } from './sidebar.style';
+import SidebarElement from './sidebarElement/sidebarElement';
 
 // Constants
 import { MOCK_NAVBAR_ELEMENTS } from 'mocks/mockNavbarElements';
+
+// Images
+const brandHorizontal = require('assets/images/los-tragos-brand-white-small.png');
 
 class Sidebar extends Component {
   state = {
@@ -21,25 +26,22 @@ class Sidebar extends Component {
   };
 
   toggleSidebar = () => {
-    console.log('CLICK');
     const { isSidebarOpen } = this.state;
     this.setState({ isSidebarOpen: !isSidebarOpen });
   };
 
   renderSidebar = (sidebarElements) => {
-    console.log('RENDER SIDEBAR');
     return (
-      <div>
+      <Wrapper>
+        <Brand src={ brandHorizontal } alt="losTRAGOS.com logo in white" />
         {
           sidebarElements.map(sidebarElement => {
             return (
-              <div key={ sidebarElement.id}>
-                { sidebarElement.name }
-              </div>
+              <SidebarElement key={ sidebarElement.id} data={ sidebarElement } />
             );
           })
         }
-      </div>
+      </Wrapper>
     );
   };
 
@@ -48,11 +50,9 @@ class Sidebar extends Component {
     return (
       <React.Fragment>
         <Icon onClick={ this.toggleSidebar } isActive={ isSidebarOpen }>&#9776;</Icon>
-        <Wrapper>
           {
             isSidebarOpen && this.renderSidebar(sidebarElements)
           }
-        </Wrapper>
       </React.Fragment>
     );
   };

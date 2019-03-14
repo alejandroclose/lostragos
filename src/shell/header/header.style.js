@@ -1,6 +1,9 @@
 // Dependencies
 import styled from 'styled-components';
 
+// Media queries
+import { device } from 'theme/device';
+
 export const HeaderWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -10,7 +13,10 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   width: 100%;
   min-height: 2rem;
-  color: ${props => props.theme.color.header.font};
-  background: ${props => props.theme.color.header.background};
-  border-bottom: 1px solid ${props => props.theme.color.header.border};
+
+  @media ${device.tablet} {
+    color: ${props => props.theme.color.header.font};
+    background: ${props => props.theme.color.header.background};
+    border-bottom: 1px solid ${props => props.theme.color.header.border};
+  }
 `;

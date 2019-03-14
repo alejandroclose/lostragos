@@ -153,5 +153,19 @@ export const MOCK_NAVBAR_ELEMENTS = [
         fullPath: '/categoria/whisky'
       },
     ]
+  },
+  {
+    id: 4,
+    name: 'Academia Online',
+    fullPath: '/academia',
+    isSubMenuOpen: false,
+    subMenu: []
+  },
+  {
+    id: 5,
+    name: 'Acceder',
+    fullPath: '/acceder',
+    isSubMenuOpen: false,
+    subMenu: []
   }
 ];
