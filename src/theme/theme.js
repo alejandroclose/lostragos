@@ -14,7 +14,7 @@ const THEME = {
       border: 'rgba(255, 255, 255, 0.25)'
     },
     sidebar: {
-      background: '#FFEFD5',
+      background: '#FFF',
       elementBackground: '#EEDEC4'
     }
   }

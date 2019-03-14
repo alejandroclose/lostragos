@@ -10,12 +10,9 @@ export const Icon = styled.button`
   z-index: 3;
   background: none;
   border: none;
-  color: ${props => props.isActive && props.theme.color.shared.highlight};
+  color: ${props => props.theme.color.header.font};
   &:hover {
-    color: ${props => props.isActive
-      ? props.theme.color.shared.highlightHover
-      : props.theme.color.header.fontHover
-    };
+    color: ${props => props.isActive && props.theme.color.header.fontHover};
   }
 
   @media ${device.tablet} {
@@ -33,15 +30,12 @@ export const Wrapper = styled.div`
   height: 100vh;
   background: ${props => props.theme.color.sidebar.background};
 
-  img {
-    width: 100%;
-  }
-
   @media ${device.tablet} {
     display: none;
   }
 `;
 
 export const Brand = styled.img`
-  margin: 0.5rem 0;
+  width: 90%;
+  margin: 0.5rem;
 `;

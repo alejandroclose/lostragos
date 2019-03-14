@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   align-items: center;
   padding-left: 1rem;
   color: ${props => props.theme.color.shared.highlight};
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #CCC;
   &:hover {
     background: ${props => props.theme.color.sidebar.elementBackground};
   }

@@ -12,7 +12,7 @@ import CallToAction from './call-to-action/callToAction';
 
 // Images
 const heroLogo = require('assets/images/los-tragos-hero-logo-white.png');
-const heroBackground = require('assets/images/hero-background.jpeg');
+const heroBackground = require('assets/images/hero-background2.jpg');
 
 const Hero = () => (
   <Wrapper>
