@@ -13,7 +13,7 @@ import SidebarElement from './sidebarElement/sidebarElement';
 import { MOCK_NAVBAR_ELEMENTS } from 'mocks/mockNavbarElements';
 
 // Images
-const brandHorizontal = require('assets/images/logo-horizontal-navbar.svg');
+const brandHorizontal = require('assets/images/los-tragos-brand-white-small.png');
 
 class Sidebar extends Component {
   state = {

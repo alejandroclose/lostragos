@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   width: 66%;
   height: 100vh;
-  background: ${props => props.theme.color.sidebar.background};
+  background: ${props => props.theme.color.header.backgroundActive};
 
   @media ${device.tablet} {
     display: none;

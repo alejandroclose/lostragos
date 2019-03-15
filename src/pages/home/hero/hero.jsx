@@ -6,6 +6,7 @@ import {
   Wrapper,
   LogoWrapper,
   Logo,
+  ArrowLink,
   OpacityLayer,
   BackgroundImg
 } from './hero.style';
@@ -21,6 +22,7 @@ const Hero = () => (
       <Logo src={ heroLogo } alt="losTRAGOS.com logo" />
     </LogoWrapper>
     <CallToAction />
+    <ArrowLink>V</ArrowLink>
     <OpacityLayer />
     <BackgroundImg src={ heroBackground } alt="Background image of spirit bottles lined up" />
   </Wrapper>

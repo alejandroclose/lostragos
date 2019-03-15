@@ -8,10 +8,10 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  color: ${props => props.theme.color.shared.highlight};
-  border-bottom: 1px solid #CCC;
+  color: ${props => props.theme.color.header.font};
+  border-bottom: 1px solid ${props => props.theme.color.header.border};
 
   &:hover {
-    background: ${props => props.theme.color.sidebar.elementBackground};
+    background: ${props => props.theme.color.header.backgroundActive};
   };
 `;

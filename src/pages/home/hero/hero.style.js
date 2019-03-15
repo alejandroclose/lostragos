@@ -15,9 +15,20 @@ export const OpacityLayer = styled.div`
   top: 0;
   height: 100%;
   width: 100%;
-  background: #000;
-  opacity: 0.5;
+  background: ${props => props.theme.color.header.background};
   z-index: -1;
+`;
+
+export const ArrowLink = styled.span`
+  position: absolute;
+  bottom: 15%;
+  left: 48%;
+  font-weight: bold;
+  border: 2 px solid ${props => props.theme.color.shared.highlight};
+  border-radius: 50%;
+  padding: 0.3rem;
+  padding-bottom: 0.2rem;
+  color: ${props => props.theme.color.shared.highlight};
 `;
 
 export const BackgroundImg = styled.img`
@@ -27,7 +38,6 @@ export const BackgroundImg = styled.img`
   height: 100%;
   width: 100%;
   z-index: -2;
-  opacity: 1;
 `;
 
 export const LogoWrapper = styled.div`
