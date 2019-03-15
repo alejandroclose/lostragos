@@ -6,6 +6,7 @@ import {
   Wrapper,
   LogoWrapper,
   Logo,
+  OpacityLayer,
   BackgroundImg
 } from './hero.style';
 import CallToAction from './call-to-action/callToAction';
@@ -20,7 +21,8 @@ const Hero = () => (
       <Logo src={ heroLogo } alt="losTRAGOS.com logo" />
     </LogoWrapper>
     <CallToAction />
-    <BackgroundImg src={ heroBackground } alt="Background image of barman serving cocktail" />
+    <OpacityLayer />
+    <BackgroundImg src={ heroBackground } alt="Background image of spirit bottles lined up" />
   </Wrapper>
 );
 

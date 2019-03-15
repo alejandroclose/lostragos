@@ -10,14 +10,24 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+export const OpacityLayer = styled.div`
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+  z-index: -1;
+`;
+
 export const BackgroundImg = styled.img`
   position: absolute;
   top: 0;
   object-fit: cover;
   height: 100%;
   width: 100%;
-  z-index: -1;
-  opacity: 0.5;
+  z-index: -2;
+  opacity: 1;
 `;
 
 export const LogoWrapper = styled.div`

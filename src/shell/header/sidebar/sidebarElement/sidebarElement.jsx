@@ -11,6 +11,7 @@ const SidebarElement = (props) => {
   return (
     <Wrapper>
       { sidebarElement.name }
+      { sidebarElement.subMenu.length > 0 && <i>&#8964;</i>}
     </Wrapper>
   );
 };

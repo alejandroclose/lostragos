@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { device } from 'theme/device';
 
 export const Icon = styled.button`
+  margin-top: 1rem;
   margin-left: ${props => props.isActive ? '70%' : '0.5rem'};
   font-size: 1.5rem;
   z-index: 3;

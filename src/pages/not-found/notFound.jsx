@@ -1,8 +1,9 @@
 // Dependencies
 import React from 'react';
 
+// Components
+import { Title } from './notFound.style';
+
 export const NotFound = () => (
-  <div>
-    <h1>404</h1>
-  </div>
+  <Title>404</Title>
 );

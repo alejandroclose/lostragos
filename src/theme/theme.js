@@ -9,8 +9,8 @@ const THEME = {
     header: {
       font: '#F0F0F0',
       fontHover: '#FFF',
-      background: 'rgba(0, 0, 0, 0.2)',
-      backgroundActive: 'rgba(0, 0, 0, 0.3)',
+      background: 'rgba(0, 0, 0, 0.5)',
+      backgroundActive: 'rgba(0, 0, 0, 0.7)',
       border: 'rgba(255, 255, 255, 0.25)'
     },
     sidebar: {
