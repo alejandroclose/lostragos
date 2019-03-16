@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 // Components
 import Header from '../header/header';
 import { ShellMainWrapper } from './shellMain.style'
-import Footer from '../footer/footer';
+import Footer from '../components/footer/footer';
 
 // Constants
 import THEME from 'theme/theme';
