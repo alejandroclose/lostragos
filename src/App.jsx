@@ -1,6 +1,5 @@
 // Dependencies
 import React, { Component } from 'react';
-
 // Components
 import {
   Route,
