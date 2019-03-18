@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 // Components
 import { StyledLink } from '../../../shared/components/styledLink';
-import { FooterWrapper, Content, Main, Card, Title, Links, Social, Copyright} from './footer.style'
+import { FooterWrapper, Content, Main, Card, Title, Links, Social, Copyright } from './footer.style'
 import Fb from '../../../shared/components/social/facebook/facebook';
 import Instagram from '../../../shared/components/social/instagram/instagram';
 import Twitter from '../../../shared/components/social/twitter/tweeter'
