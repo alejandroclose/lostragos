@@ -8,6 +8,7 @@ import {
   Brand
 } from './sidebar.style';
 import SidebarElement from './sidebarElement/sidebarElement';
+import { Link } from 'react-router-dom';
 
 // Constants
 import { MOCK_NAVBAR_ELEMENTS } from 'mocks/mockNavbarElements';
@@ -30,14 +31,35 @@ class Sidebar extends Component {
     this.setState({ isSidebarOpen: !isSidebarOpen });
   };
 
+  toggleSubMenu = (sidebarElement) => {
+    const { sidebarElements } = this.state;
+    const newSidebarElements = sidebarElements.map(element => {
+      if (element.id === sidebarElement.id) {
+        element.isSubMenuOpen = !element.isSubMenuOpen;
+      }
+      return element;
+    });
+
+    this.setState({
+      sidebarElements: newSidebarElements
+    });
+  };
+
   renderSidebar = (sidebarElements) => {
     return (
       <Wrapper>
-        <Brand src={ brandHorizontal } alt="losTRAGOS.com logo in white" />
+        <Link to={'/'}>
+          <Brand src={ brandHorizontal } alt="losTRAGOS.com logo in white" />
+        </Link>
         {
           sidebarElements.map(sidebarElement => {
             return (
-              <SidebarElement key={ sidebarElement.id} data={ sidebarElement } />
+              <SidebarElement
+                key={ sidebarElement.id }
+                data={ sidebarElement }
+                toggleSubMenu={ () => { this.toggleSubMenu(sidebarElement) } }
+                toggleSidebar={ this.toggleSidebar }
+              />
             );
           })
         }
@@ -56,9 +78,9 @@ class Sidebar extends Component {
     return (
       <React.Fragment>
         <Icon onClick={ this.toggleSidebar } isActive={ isSidebarOpen }>{ icon }</Icon>
-          {
-            isSidebarOpen && this.renderSidebar(sidebarElements)
-          }
+            {
+              isSidebarOpen && this.renderSidebar(sidebarElements)
+            }
       </React.Fragment>
     );
   };
