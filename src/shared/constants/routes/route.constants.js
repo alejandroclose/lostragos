@@ -30,6 +30,24 @@ export const ROUTE_CONSTANTS = {
       path: 'academia'
     }
   },
+  SOBRE_NOSOTROS:{
+    SOBRE_NOSOTROS_MAIN: {
+      fullPath: '/sobre-nosotros',
+      path: 'sobre-nosotros'
+    }
+  },
+  CONTACTO:{
+    CONTACTO_MAIN: {
+      fullPath: '/contacto',
+      path: 'contacto'
+    }
+  },
+  PRIVACIDAD:{
+    PRIVACIDAD_MAIN: {
+      fullPath: '/privacidad',
+      path: 'privacidad'
+    }
+  },
   LOGIN: {
     LOGIN_MAIN: {
       fullPath: '/login',
