@@ -1,5 +1,5 @@
 // Dependencies
-import React, { Component } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Components
 import NavbarElement from './navbarElement/navbarElement';
@@ -8,44 +8,41 @@ import { NavbarWrapper } from './navbar.style';
 // Mocks
 import { MOCK_NAVBAR_ELEMENTS } from 'mocks/mockNavbarElements';
 
-class Navbar extends Component {
-  state = {
-    mockNavbarElements: [],
+const Navbar = () => {
+  const [mockNavbarElements, setMockNavbarElements] = useState([]);
+  const node = useRef();
+
+  // Load NavbarElements into state on mount.
+  useEffect(() => {
+    setMockNavbarElements(MOCK_NAVBAR_ELEMENTS);
+  }, []);
+
+  const toggleSubMenus = (clickedNavbarElement = null) => {
+    const newNavbarElements = mockNavbarElements.map(navbarElement => {
+      if (clickedNavbarElement && clickedNavbarElement.id === navbarElement.id && !clickedNavbarElement.isSubMenuOpen) {
+        navbarElement.isSubMenuOpen = true;
+      } else {
+        navbarElement.isSubMenuOpen = false;
+      }
+      return navbarElement;
+    });
+    setMockNavbarElements(newNavbarElements);
   };
 
-  componentDidMount = () => {
-    // Loads mock data into state.
-    this.setState({ mockNavbarElements: MOCK_NAVBAR_ELEMENTS });
-  };
-
-  toggleSubMenus = (clickedNavbarElement = null) => {
-    const { mockNavbarElements } = this.state;
-
-      mockNavbarElements.forEach(navbarElement => {
-        if (clickedNavbarElement && clickedNavbarElement.id === navbarElement.id && !clickedNavbarElement.isSubMenuOpen) {
-          navbarElement.isSubMenuOpen = true;
-        } else {
-          navbarElement.isSubMenuOpen = false;
-        }
-      });
-    this.setState({ mockNavbarElements });
-  }
-
-  render() {
-    const { mockNavbarElements } = this.state;
-    return (
-      <NavbarWrapper>
-        {
-          mockNavbarElements.map(mockElement => {
-            return <NavbarElement
-              key={ mockElement.id }
-              data={ mockElement }
-              handleToggle={ this.toggleSubMenus } />
-          })
-        }
-      </NavbarWrapper>
-    );
-  }
+  return (
+    <NavbarWrapper ref={ node }>
+      {
+        mockNavbarElements.map(mockElement => {
+          return <NavbarElement
+            key={ mockElement.id }
+            data={ mockElement }
+            handleToggle={ toggleSubMenus }
+            // Reference to NavbarWrapper
+            node={ node } />
+        })
+      }
+    </NavbarWrapper>
+  );
 }
 
 export default Navbar;

@@ -38,5 +38,5 @@ export const Wrapper = styled.div`
 
 export const Brand = styled.img`
   width: 90%;
-  margin: 0.5rem;
+  margin: 0.75rem 0.5rem;
 `;

@@ -27,12 +27,17 @@ class Sidebar extends Component {
   };
 
   toggleSidebar = () => {
+    console.log('TOGGLE SB: ', this.state.sidebarElements);
     const { isSidebarOpen } = this.state;
-    this.setState({ isSidebarOpen: !isSidebarOpen });
+    this.setState({
+      isSidebarOpen: !isSidebarOpen,
+      sidebarElements: MOCK_NAVBAR_ELEMENTS
+    });
   };
 
   toggleSubMenu = (sidebarElement) => {
-    const { sidebarElements } = this.state;
+    console.log('TOGGLE SM: ', this.state.sidebarElements);
+    const sidebarElements = MOCK_NAVBAR_ELEMENTS;
     const newSidebarElements = sidebarElements.map(element => {
       if (element.id === sidebarElement.id) {
         element.isSubMenuOpen = !element.isSubMenuOpen;
@@ -42,7 +47,7 @@ class Sidebar extends Component {
 
     this.setState({
       sidebarElements: newSidebarElements
-    });
+    }, console.log('AFTER: ', this.state.sidebarElements));
   };
 
   renderSidebar = (sidebarElements) => {

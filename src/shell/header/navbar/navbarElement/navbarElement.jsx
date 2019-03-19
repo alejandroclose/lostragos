@@ -1,6 +1,5 @@
 // Dependencies
-import React, { Component } from  'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect, useRef } from  'react';
 
 // Components
 import {
@@ -10,26 +9,28 @@ import {
 } from './navbarElement.style';
 import { Link } from 'react-router-dom';
 
-class NavbarElement extends Component {
+const NavbarElement = (props) => {
+  const { handleToggle } = props;
+  const navbarElement = props.data;
 
   // Set up eventListeners for outside-of-component clicks.
-  componentDidUpdate() {
-    const navbarElement = this.props.data;
+  useEffect(() => {
     if (navbarElement.isSubMenuOpen) {
-      document.addEventListener('click', this.handleClick, false);
-    } else {
-      document.removeEventListener('click', this.handleClick, false);
-    };
-  };
+      document.addEventListener('click', handleClick, false);
+    }
+    return () => {
+      document.removeEventListener('click', handleClick, false);
+    }
+  }, [props.data.isSubMenuOpen]);
 
-  handleClick = (event) => {
-    const { handleToggle } = this.props;
-    if(!ReactDOM.findDOMNode(this).contains(event.target)) {
+  const handleClick = (event) => {
+    const { handleToggle, node } = props;
+    if(!node.current.contains(event.target)) {
       handleToggle();
     }
   };
 
-  renderSubMenu = (subMenu) => (
+  const renderSubMenu = (subMenu) => (
     <SubMenuWrapper>
       {
         subMenu.map(subMenuElement => {
@@ -45,19 +46,14 @@ class NavbarElement extends Component {
     </SubMenuWrapper>
   );
 
-  render() {
-    const { handleToggle } = this.props;
-    const navbarElement = this.props.data;
-
-    return (
-      <NavElementWrapper isActive={ navbarElement.isSubMenuOpen } onClick={ () => { handleToggle(navbarElement) }}>
-        { navbarElement.name }
-        {
-          navbarElement.isSubMenuOpen && this.renderSubMenu(navbarElement.subMenu)
-        }
-      </NavElementWrapper>
-    );
-  }
+  return (
+    <NavElementWrapper isActive={ navbarElement.isSubMenuOpen } onClick={ () => { handleToggle(navbarElement) } }>
+      { navbarElement.name }
+      {
+        navbarElement.isSubMenuOpen && renderSubMenu(navbarElement.subMenu)
+      }
+    </NavElementWrapper>
+  );
 };
 
 export default NavbarElement;
