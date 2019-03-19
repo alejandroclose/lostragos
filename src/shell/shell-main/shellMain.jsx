@@ -3,9 +3,9 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 // Components
-import Header from '../header/header';
 import { ShellMainWrapper } from './shellMain.style'
-import Footer from '../components/footer/footer';
+import Header from '../header/header';
+import Footer from '../footer/footer';
 
 // Constants
 import THEME from 'theme/theme';
