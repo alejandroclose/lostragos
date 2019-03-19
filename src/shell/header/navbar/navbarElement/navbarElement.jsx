@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 // Components
 import {
-  StyledNavElementWrapper,
+  NavElementWrapper,
   SubMenuWrapper,
   SubMenuElement
 } from './navbarElement.style';
@@ -50,12 +50,12 @@ class NavbarElement extends Component {
     const navbarElement = this.props.data;
 
     return (
-      <StyledNavElementWrapper isActive={ navbarElement.isSubMenuOpen } onClick={ () => { handleToggle(navbarElement) }}>
+      <NavElementWrapper isActive={ navbarElement.isSubMenuOpen } onClick={ () => { handleToggle(navbarElement) }}>
         { navbarElement.name }
         {
           navbarElement.isSubMenuOpen && this.renderSubMenu(navbarElement.subMenu)
         }
-      </StyledNavElementWrapper>
+      </NavElementWrapper>
     );
   }
 };

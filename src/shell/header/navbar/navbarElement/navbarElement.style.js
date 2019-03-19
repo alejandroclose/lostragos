@@ -1,11 +1,7 @@
 // Dependencies
 import styled from 'styled-components';
 
-// Media queries
-import { device } from 'theme/device';
-
-export const StyledNavElementWrapper = styled.button`
-  display: none;
+export const NavElementWrapper = styled.button`
   align-items: center;
   position: relative;
   height: 3rem;
@@ -14,10 +10,6 @@ export const StyledNavElementWrapper = styled.button`
   &:hover {
     background: ${props => props.theme.color.header.backgroundActive};
     transition: background 500ms ease-out;
-  }
-
-  @media ${device.tablet} {
-    display: flex;
   }
 `;
 
