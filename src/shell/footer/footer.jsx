@@ -12,9 +12,6 @@ import {
   Social,
   Copyright } from './footer.style'
 import { SocialMediaIcon, StyledLink } from 'shared';
-// import Fb from '../../../shared/components/social/facebook/facebook';
-// import Instagram from '../../../shared/components/social/instagram/instagram';
-// import Twitter from '../../../shared/components/social/twitter/tweeter'
 
 // Constants
 import { ROUTE_CONSTANTS } from 'shared';

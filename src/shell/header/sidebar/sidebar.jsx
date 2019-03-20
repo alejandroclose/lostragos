@@ -3,9 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 
 // Components
 import {
+  TestWrapper,
   Icon,
   Wrapper,
-  Brand
+  Brand,
+  MoveIn
 } from './sidebar.style';
 import SidebarElement from './sidebarElement/sidebarElement';
 import { Link } from 'react-router-dom';
@@ -21,7 +23,7 @@ const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const node = useRef();
 
-  // Load siidebarElements on mount.
+  // Load sidebarElements on mount.
   useEffect(() => {
     setSidebarElements(MOCK_NAVBAR_ELEMENTS);
   }, []);
@@ -58,7 +60,7 @@ const Sidebar = () => {
 
   const renderSidebar = (sidebarElements) => {
     return (
-      <Wrapper ref={ node }>
+      <MoveIn ref={ node } isActive={ isSidebarOpen }>
         <Link to={'/'}>
           <Brand src={ brandHorizontal } alt="losTRAGOS.com logo in white" />
         </Link>
@@ -74,7 +76,7 @@ const Sidebar = () => {
             );
           })
         }
-      </Wrapper>
+      </MoveIn>
     );
   };
 
@@ -85,12 +87,13 @@ const Sidebar = () => {
   };
 
   return (
-    <React.Fragment >
+    <TestWrapper>
+      {
+        isSidebarOpen && renderSidebar(sidebarElements)
+        // renderSidebar(sidebarElements)
+      }
       <Icon onClick={ toggleSidebar } isActive={ isSidebarOpen }>{ icon }</Icon>
-          {
-            isSidebarOpen && renderSidebar(sidebarElements)
-          }
-    </React.Fragment>
+    </TestWrapper>
   );
 };
 
