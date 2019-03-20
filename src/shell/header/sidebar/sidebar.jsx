@@ -46,8 +46,8 @@ const Sidebar = () => {
   };
 
   const toggleSubMenu = (sidebarElement) => {
-    const balls = MOCK_NAVBAR_ELEMENTS;
-    const newSidebarElements = balls.map(element => {
+    const mockElements = MOCK_NAVBAR_ELEMENTS;
+    const newSidebarElements = mockElements.map(element => {
       if (element.id === sidebarElement.id) {
         element.isSubMenuOpen = !element.isSubMenuOpen;
       } else {

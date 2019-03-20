@@ -56,7 +56,7 @@ export const BaseAnimation = styled(Wrapper)`
 `;
 
 BaseAnimation.defaultProps = {
-  duration: '0.5s',
+  duration: '0.33s',
   timingFunction: 'ease',
   delay: '0s',
   iterationCount: '1',
@@ -67,8 +67,8 @@ BaseAnimation.defaultProps = {
 }
 
 const MoveInAnimation = keyframes`
-  from { left: -1000px; }
-  to { left: 0px; }
+  from { transform: translateX(-1000px); }
+  to { transform: translateX(0px); }
 `;
 
 export const MoveIn = styled(BaseAnimation)`
