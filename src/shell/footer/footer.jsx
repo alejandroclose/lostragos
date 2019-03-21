@@ -10,11 +10,9 @@ import {
   Title,
   Links,
   Social,
-  Copyright } from './footer.style'
+  Copyright
+} from './footer.style'
 import { SocialMediaIcon, StyledLink } from 'shared';
-// import Fb from '../../../shared/components/social/facebook/facebook';
-// import Instagram from '../../../shared/components/social/instagram/instagram';
-// import Twitter from '../../../shared/components/social/twitter/tweeter'
 
 // Constants
 import { ROUTE_CONSTANTS } from 'shared';
@@ -43,11 +41,16 @@ class Footer extends Component {
                 <StyledLink to={ROUTE_CONSTANTS.PRIVACIDAD.PRIVACIDAD_MAIN.fullPath}>Política de Privacidad</StyledLink>
               </Links>
             </Card>
+            <Card>
             <Social>
+              
               <SocialMediaIcon network="instagram" />
               <SocialMediaIcon network="facebook" />
               <SocialMediaIcon network="twitter" />
-            </Social>
+              </Social>
+            </Card>
+            
+          
           </Main>
         </Content>
         <Copyright>
