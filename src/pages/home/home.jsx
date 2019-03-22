@@ -1,11 +1,11 @@
 // Dependencies
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // Components
 import Hero from './hero/hero';
 
 export const Home = () => (
-  <div>
+  <Fragment>
     <Hero />
     <section>
       <h1>Section 1</h1>
@@ -16,5 +16,5 @@ export const Home = () => (
     <section>
       <h1>Section 3</h1>
     </section>
-  </div>
+  </Fragment>
 );

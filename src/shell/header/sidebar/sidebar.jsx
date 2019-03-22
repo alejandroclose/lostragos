@@ -3,11 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 
 // Components
 import {
-  TestWrapper,
-  Icon,
+  SidebarWrapper,
   Wrapper,
+  Icon,
   Brand,
-  MoveIn
+  MoveInOut
 } from './sidebar.style';
 import SidebarElement from './sidebarElement/sidebarElement';
 import { Link } from 'react-router-dom';
@@ -36,7 +36,12 @@ const Sidebar = () => {
   }, [isSidebarOpen]);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+    if (isSidebarOpen) {
+      setIsSidebarOpen(false);
+      toggleSubMenu();
+    } else {
+      setIsSidebarOpen(true);
+    }
   };
 
   const handleClick = (event) => {
@@ -45,10 +50,10 @@ const Sidebar = () => {
     }
   };
 
-  const toggleSubMenu = (sidebarElement) => {
+  const toggleSubMenu = (sidebarElement = null) => {
     const mockElements = MOCK_NAVBAR_ELEMENTS;
     const newSidebarElements = mockElements.map(element => {
-      if (element.id === sidebarElement.id) {
+      if (sidebarElement && element.id === sidebarElement.id) {
         element.isSubMenuOpen = !element.isSubMenuOpen;
       } else {
         element.isSubMenuOpen = false;
@@ -60,23 +65,25 @@ const Sidebar = () => {
 
   const renderSidebar = (sidebarElements) => {
     return (
-      <MoveIn ref={ node } isActive={ isSidebarOpen }>
-        <Link to={'/'}>
-          <Brand src={ brandHorizontal } alt="losTRAGOS.com logo in white" />
-        </Link>
-        {
-          sidebarElements.map(sidebarElement => {
-            return (
-              <SidebarElement
-                key={ sidebarElement.id }
-                data={ sidebarElement }
-                toggleSubMenu={ () => { toggleSubMenu(sidebarElement) } }
-                toggleSidebar={ toggleSidebar }
-              />
-            );
-          })
-        }
-      </MoveIn>
+      <MoveInOut ref={ node } isActive={ isSidebarOpen }>
+        <Wrapper>
+          <Link to={'/'}>
+            <Brand src={ brandHorizontal } alt="losTRAGOS.com logo in white" />
+          </Link>
+          {
+            sidebarElements.map(sidebarElement => {
+              return (
+                <SidebarElement
+                  key={ sidebarElement.id }
+                  data={ sidebarElement }
+                  toggleSubMenu={ () => { toggleSubMenu(sidebarElement) } }
+                  toggleSidebar={ toggleSidebar }
+                />
+              );
+            })
+          }
+        </Wrapper>
+      </MoveInOut>
     );
   };
 
@@ -87,13 +94,14 @@ const Sidebar = () => {
   };
 
   return (
-    <TestWrapper>
+    <SidebarWrapper>
       {
-        isSidebarOpen && renderSidebar(sidebarElements)
-        // renderSidebar(sidebarElements)
+        renderSidebar(sidebarElements)
       }
-      <Icon onClick={ toggleSidebar } isActive={ isSidebarOpen }>{ icon }</Icon>
-    </TestWrapper>
+      <MoveInOut isActive={ isSidebarOpen }>
+        <Icon onClick={ toggleSidebar } isActive={ isSidebarOpen }>{ icon }</Icon>
+      </MoveInOut>
+    </SidebarWrapper>
   );
 };
 

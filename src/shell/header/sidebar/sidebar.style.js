@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 // Media queries
 import { device } from 'theme/device';
 
-export const TestWrapper = styled.div`
+export const SidebarWrapper = styled.div`
   display: flex;
   align-items: flex-start;
 `;
@@ -44,7 +44,7 @@ export const Brand = styled.img`
   margin: 0.75rem 0.5rem;
 `;
 
-export const BaseAnimation = styled(Wrapper)`
+export const BaseAnimation = styled.div`
   animation-duration: ${props => props.duration};
   animation-timing-function: ${props => props.timingFunction};
   animation-delay: ${props => props.delay};
@@ -56,7 +56,7 @@ export const BaseAnimation = styled(Wrapper)`
 `;
 
 BaseAnimation.defaultProps = {
-  duration: '0.33s',
+  duration: '0.3s',
   timingFunction: 'ease',
   delay: '0s',
   iterationCount: '1',
@@ -66,11 +66,16 @@ BaseAnimation.defaultProps = {
   display: 'block'
 }
 
-const MoveInAnimation = keyframes`
-  from { transform: translateX(-1000px); }
-  to { transform: translateX(0px); }
+// Props must be passed like this for keyframes to work.
+const MoveInOutAnimation = (props) => keyframes`
+  from {
+    transform: ${props.isActive ? 'traslateX(0px)' : 'translateX(-1000px)'}
+  }
+  to {
+    transform: ${props.isActive ? 'translateX(-1000px)' : 'translateX(0px)'}
+  }
 `;
 
-export const MoveIn = styled(BaseAnimation)`
-  animation-name: ${MoveInAnimation};
+export const MoveInOut = styled(BaseAnimation)`
+  animation-name: ${MoveInOutAnimation}
 `;
