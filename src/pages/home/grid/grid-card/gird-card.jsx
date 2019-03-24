@@ -5,9 +5,7 @@ import { Wrapper, Image, Text } from './grid-card.style'
 
 const GridCard = (props) => (
   <Wrapper>
-    <Image>
-      <img src={props.icon}/>
-    </Image>
+    <Image src={props.icon}/>
     <Text>
       {props.title}
     </Text>
