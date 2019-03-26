@@ -52,5 +52,23 @@ export const MOCK_GRID_ELEMENTS = [
     title: 'Afrodisiacos',
     icon: afrodisiacos,
     fullPath: '/categorias/afrodisiacos'
+  },
+  {
+    id: 8,
+    title: '8',
+    icon: afrodisiacos,
+    fullPath: '/categorias/afrodisiacos'
+  },
+  {
+    id: 9,
+    title: '9',
+    icon: afrodisiacos,
+    fullPath: '/categorias/afrodisiacos'
+  },
+  {
+    id: 10,
+    title: '10',
+    icon: afrodisiacos,
+    fullPath: '/categorias/afrodisiacos'
   }
 ]

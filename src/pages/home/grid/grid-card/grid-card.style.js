@@ -3,7 +3,9 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  width: 375px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 `
 export const Image = styled.div`
   width: 150px;
