@@ -1,11 +1,13 @@
 // Dependencies
-import React, { Component } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Components
 import {
+  TestWrapper,
   Icon,
   Wrapper,
-  Brand
+  Brand,
+  MoveIn
 } from './sidebar.style';
 import SidebarElement from './sidebarElement/sidebarElement';
 import { Link } from 'react-router-dom';
@@ -16,38 +18,49 @@ import { MOCK_NAVBAR_ELEMENTS } from 'mocks/mockNavbarElements';
 // Images
 const brandHorizontal = require('assets/images/los-tragos-brand-white-small.png');
 
-class Sidebar extends Component {
-  state = {
-    sidebarElements: [],
-    isSidebarOpen: false
+const Sidebar = () => {
+  const [sidebarElements, setSidebarElements] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const node = useRef();
+
+  // Load sidebarElements on mount.
+  useEffect(() => {
+    setSidebarElements(MOCK_NAVBAR_ELEMENTS);
+  }, []);
+
+  useEffect(() => {
+    isSidebarOpen && document.addEventListener('click', handleClick, false);
+    return () => {
+      document.removeEventListener('click', handleClick, false);
+    }
+  }, [isSidebarOpen]);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
-  componentWillMount() {
-    this.setState({ sidebarElements: MOCK_NAVBAR_ELEMENTS });
+  const handleClick = (event) => {
+    if (node.current) {
+      !node.current.contains(event.target) && toggleSidebar();
+    }
   };
 
-  toggleSidebar = () => {
-    const { isSidebarOpen } = this.state;
-    this.setState({ isSidebarOpen: !isSidebarOpen });
-  };
-
-  toggleSubMenu = (sidebarElement) => {
-    const { sidebarElements } = this.state;
-    const newSidebarElements = sidebarElements.map(element => {
+  const toggleSubMenu = (sidebarElement) => {
+    const mockElements = MOCK_NAVBAR_ELEMENTS;
+    const newSidebarElements = mockElements.map(element => {
       if (element.id === sidebarElement.id) {
         element.isSubMenuOpen = !element.isSubMenuOpen;
+      } else {
+        element.isSubMenuOpen = false;
       }
       return element;
     });
-
-    this.setState({
-      sidebarElements: newSidebarElements
-    });
+    setSidebarElements(newSidebarElements);
   };
 
-  renderSidebar = (sidebarElements) => {
+  const renderSidebar = (sidebarElements) => {
     return (
-      <Wrapper>
+      <MoveIn ref={ node } isActive={ isSidebarOpen }>
         <Link to={'/'}>
           <Brand src={ brandHorizontal } alt="losTRAGOS.com logo in white" />
         </Link>
@@ -57,33 +70,31 @@ class Sidebar extends Component {
               <SidebarElement
                 key={ sidebarElement.id }
                 data={ sidebarElement }
-                toggleSubMenu={ () => { this.toggleSubMenu(sidebarElement) } }
-                toggleSidebar={ this.toggleSidebar }
+                toggleSubMenu={ () => { toggleSubMenu(sidebarElement) } }
+                toggleSidebar={ toggleSidebar }
               />
             );
           })
         }
-      </Wrapper>
+      </MoveIn>
     );
   };
 
-  render() {
-    const { sidebarElements, isSidebarOpen } = this.state;
-    let icon = <span>&#9776;</span>;
+  let icon = <span>&#9776;</span>;
 
-    if (isSidebarOpen) {
-      icon = <span>&#x2715;</span>;
-    };
-
-    return (
-      <React.Fragment>
-        <Icon onClick={ this.toggleSidebar } isActive={ isSidebarOpen }>{ icon }</Icon>
-            {
-              isSidebarOpen && this.renderSidebar(sidebarElements)
-            }
-      </React.Fragment>
-    );
+  if (isSidebarOpen) {
+    icon = <span>&#x2715;</span>;
   };
+
+  return (
+    <TestWrapper>
+      {
+        isSidebarOpen && renderSidebar(sidebarElements)
+        // renderSidebar(sidebarElements)
+      }
+      <Icon onClick={ toggleSidebar } isActive={ isSidebarOpen }>{ icon }</Icon>
+    </TestWrapper>
+  );
 };
 
 export default Sidebar;
