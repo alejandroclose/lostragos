@@ -8,9 +8,7 @@ import Grid from './grid/grid';
 export const Home = () => (
   <div>
     <Hero />
-    <section>
-      <Grid/>
-    </section>
+    <Grid/>
     <section>
       <h1>Section 2</h1>
     </section>
