@@ -13,7 +13,8 @@ export const Wrapper = styled.div`
   &:hover {
 
     font-weight: bold;
-    box-shadow: 0px 0px 5px 0.5px #D02936;
+    box-shadow: 0px 0px 1px 0.3px #D02936;
+    filter: drop-shadow(0px 0px 0.5px #D02936);
 `
 export const Image = styled.div`
   width: 200px;
