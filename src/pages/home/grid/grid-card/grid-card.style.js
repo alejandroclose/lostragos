@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  border: 3px solid #D02936;
+  border: 2px solid #D02936;
 
   &:hover {
 
