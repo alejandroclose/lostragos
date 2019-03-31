@@ -12,7 +12,7 @@ export const GridWrapper = styled.div`
 `
 
 export const GridCards = styled.div`
-  width: 100%;
+  max-width: 1000px;
   margin: 3px;
   display: flex;
   flex-direction: row;

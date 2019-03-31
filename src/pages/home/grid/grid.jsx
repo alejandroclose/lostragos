@@ -15,17 +15,23 @@ class Grid extends Component {
     mockGridElements: [],
     gridItemsLength: 0,
     showCards: 4,
-    buttonText: "Ver más categorias"
-  }
-
-  componentDidMount = () => {
+    isGridOpen: false,
+    }
+  componentWillMount = () => {
     this.setState({ mockGridElements: MOCK_GRID_ELEMENTS });
   }
 
   handleClick = (e) => {
-    this.setState({
-      showCards: this.state.gridItemsLength
-    });
+    if (this.state.showCards > 4) {
+      this.setState({
+        showCards: 4
+      })
+    }
+    else {
+      this.setState({
+        showCards: this.state.gridItemsLength
+      });
+    }
   }
   render() {
     const { mockGridElements } = this.state;
