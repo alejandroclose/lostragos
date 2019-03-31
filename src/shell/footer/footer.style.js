@@ -8,14 +8,18 @@ export const FooterWrapper = styled.div`
   flex-wrap: nowrap;
   color: white;
   padding: 20px 40px;
-`;
+  justify-content: space-between;
+  min-height: 3rem;
+  `;
 
 export const Content = styled.div`
-  display: flex;
+width: 100%;  
+display: flex;
   flex-direction: row;
   flex-wrap: wrap;  
   margin: 0 0 20px 0;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const Main = styled.div`
@@ -27,6 +31,8 @@ export const Main = styled.div`
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 20px 50px 0 0;
 `;
 
@@ -47,7 +53,7 @@ export const Social = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 export const Copyright = styled.div`

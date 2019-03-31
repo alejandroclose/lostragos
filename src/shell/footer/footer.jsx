@@ -10,7 +10,8 @@ import {
   Title,
   Links,
   Social,
-  Copyright } from './footer.style'
+  Copyright
+} from './footer.style'
 import { SocialMediaIcon, StyledLink } from 'shared';
 
 // Constants
@@ -40,11 +41,16 @@ class Footer extends Component {
                 <StyledLink to={ROUTE_CONSTANTS.PRIVACIDAD.PRIVACIDAD_MAIN.fullPath}>Política de Privacidad</StyledLink>
               </Links>
             </Card>
+            <Card>
             <Social>
+              
               <SocialMediaIcon network="instagram" />
               <SocialMediaIcon network="facebook" />
               <SocialMediaIcon network="twitter" />
-            </Social>
+              </Social>
+            </Card>
+            
+          
           </Main>
         </Content>
         <Copyright>
