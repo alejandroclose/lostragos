@@ -18,11 +18,10 @@ const Grid = () => {
 
   useEffect(() => {
     setMockGridElements(MOCK_GRID_ELEMENTS)
-  }, [])
+  }, [isGridOpen])
 
   const handleClick = () => {
-    console.log('click')
-    isGridOpen ? setShowCards(mockGridElements.length) : setShowCards(4);
+    isGridOpen ? setShowCards(4) : setShowCards(mockGridElements.length);
     setIsGridOpen(!isGridOpen);
   }
   return (
@@ -32,18 +31,16 @@ const Grid = () => {
         </GridTitle>
       <GridCards>
         {
-          mockGridElements.map((gridElement, index) => {
-            if (index < showCards) {
-              return (
-                <StyledLink to={gridElement.fullPath} key={gridElement.id}>
-                  <GridCard
-                    title={gridElement.title}
-                    icon={gridElement.icon}
-                    fullPath={gridElement.fullPath}>
-                  </GridCard>
-                </StyledLink>
-              )
-            }
+          mockGridElements.slice(0, showCards).map((gridElement, index) => {
+            return (
+              <StyledLink to={gridElement.fullPath} key={gridElement.id}>
+                <GridCard
+                  title={gridElement.title}
+                  icon={gridElement.icon}
+                  fullPath={gridElement.fullPath}>
+                </GridCard>
+              </StyledLink>
+            )
           })
         }
       </GridCards>
