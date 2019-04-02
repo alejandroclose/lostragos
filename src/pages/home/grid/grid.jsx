@@ -1,62 +1,55 @@
 // Dependencies
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Components
 import GridCard from './grid-card/gird-card'
 import { StyledLink } from '../../../shared/components/'
-import { GridWrapper, GridCards } from './grid.style'
+import { GridWrapper, GridTitle, GridCards } from './grid.style'
 import { Button } from 'shared';
 
 //Mocks
 import { MOCK_GRID_ELEMENTS } from 'mocks/mockGridElements';
 
-class Grid extends Component {
-  state = {
-    mockGridElements: [],
-    gridItemsLength: 0,
-    showCards: 4,
-    isGridOpen: false,
-    }
-  componentWillMount = () => {
-    this.setState({ mockGridElements: MOCK_GRID_ELEMENTS });
-  }
+const Grid = () => {
+  const [mockGridElements, setMockGridElements] = useState([]);
+  const [showCards, setShowCards] = useState(4);
+  const [isGridOpen, setIsGridOpen] = useState(false);
 
-  handleClick = (e) => {
-    if (this.state.showCards > 4) {
-      this.setState({
-        showCards: 4
-      })
-    }
-    else {
-      this.setState({
-        showCards: this.state.gridItemsLength
-      });
-    }
+
+  useEffect(()=>{
+    setMockGridElements(MOCK_GRID_ELEMENTS)
+  }, [])
+
+  const handleClick = () => {
+    setIsGridOpen(!isGridOpen);
+    isGridOpen ? setShowCards(mockGridElements.length) : setShowCards(4);
   }
-  render() {
-    const { mockGridElements } = this.state;
-    this.state.gridItemsLength = mockGridElements.length;
     return (
       <GridWrapper>
+        <GridTitle>
+          Busca por categorías
+        </GridTitle>
         <GridCards>
           {
-            mockGridElements.slice(0, this.state.showCards).map(gridElement => {
-              return (
-                <StyledLink to={gridElement.fullPath} key={gridElement.id}>
-                  <GridCard
-                    title={gridElement.title}
-                    icon={gridElement.icon}
-                    fullPath={gridElement.fullPath}>
-                  </GridCard>
-                </StyledLink>
-              )
+            mockGridElements.map((gridElement, index) => {
+              if(index < showCards){
+                return (
+                  <StyledLink to={gridElement.fullPath} key={gridElement.id}>
+                    <GridCard
+                      title={gridElement.title}
+                      icon={gridElement.icon}
+                      fullPath={gridElement.fullPath}>
+                    </GridCard>
+                  </StyledLink>
+                )
+              }
+
             })
           }
         </GridCards>
-        <Button onClick={this.handleClick}>Ver todas las categorías</Button>
+        <Button onClick={handleClick}>Categorías</Button>
       </GridWrapper>
     )
-  }
 }
 
 export default Grid;
