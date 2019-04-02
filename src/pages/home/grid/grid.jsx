@@ -16,40 +16,40 @@ const Grid = () => {
   const [isGridOpen, setIsGridOpen] = useState(false);
 
 
-  useEffect(()=>{
+  useEffect(() => {
     setMockGridElements(MOCK_GRID_ELEMENTS)
   }, [])
 
   const handleClick = () => {
-    setIsGridOpen(!isGridOpen);
+    console.log('click')
     isGridOpen ? setShowCards(mockGridElements.length) : setShowCards(4);
+    setIsGridOpen(!isGridOpen);
   }
-    return (
-      <GridWrapper>
-        <GridTitle>
-          Busca por categorías
+  return (
+    <GridWrapper>
+      <GridTitle>
+        Busca por categorías
         </GridTitle>
-        <GridCards>
-          {
-            mockGridElements.map((gridElement, index) => {
-              if(index < showCards){
-                return (
-                  <StyledLink to={gridElement.fullPath} key={gridElement.id}>
-                    <GridCard
-                      title={gridElement.title}
-                      icon={gridElement.icon}
-                      fullPath={gridElement.fullPath}>
-                    </GridCard>
-                  </StyledLink>
-                )
-              }
-
-            })
-          }
-        </GridCards>
-        <Button onClick={handleClick}>Categorías</Button>
-      </GridWrapper>
-    )
+      <GridCards>
+        {
+          mockGridElements.map((gridElement, index) => {
+            if (index < showCards) {
+              return (
+                <StyledLink to={gridElement.fullPath} key={gridElement.id}>
+                  <GridCard
+                    title={gridElement.title}
+                    icon={gridElement.icon}
+                    fullPath={gridElement.fullPath}>
+                  </GridCard>
+                </StyledLink>
+              )
+            }
+          })
+        }
+      </GridCards>
+      <Button onClick={handleClick}>Categorías</Button>
+    </GridWrapper>
+  )
 }
 
 export default Grid;
