@@ -14,14 +14,22 @@ const Grid = () => {
   const [mockGridElements, setMockGridElements] = useState([]);
   const [showCards, setShowCards] = useState(4);
   const [isGridOpen, setIsGridOpen] = useState(false);
+  const [buttonText, setButtonText] = useState("Ver más categorías");
 
 
   useEffect(() => {
     setMockGridElements(MOCK_GRID_ELEMENTS)
-  }, [isGridOpen])
+  }, [])
 
   const handleClick = () => {
-    isGridOpen ? setShowCards(4) : setShowCards(mockGridElements.length);
+    if (isGridOpen) {
+      setShowCards(4);
+      setButtonText("Ver más categorías");
+      
+    } else{
+      setShowCards(mockGridElements.length);
+      setButtonText(<span>&#x2715;</span>);
+    }
     setIsGridOpen(!isGridOpen);
   }
   return (
@@ -44,7 +52,7 @@ const Grid = () => {
           })
         }
       </GridCards>
-      <Button onClick={handleClick}>Categorías</Button>
+      <Button onClick={handleClick}>{buttonText}</Button>
     </GridWrapper>
   )
 }
