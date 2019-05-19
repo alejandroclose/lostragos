@@ -1,6 +1,18 @@
 // Dependencies
 import styled from 'styled-components';
 
+export const Glide = styled.div`
+`
+
+export const GlideTrack = styled.div`
+`
+
+export const GlideSlide = styled.ul`
+`
+
+export const GlideSlides = styled.li`
+`
+
 export const GridWrapper = styled.div`
   display: flex;
   flex-direction: column;

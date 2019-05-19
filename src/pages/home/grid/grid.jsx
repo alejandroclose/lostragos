@@ -1,5 +1,6 @@
 // Dependencies
 import React, { useState, useEffect } from 'react';
+import {useTransition, animated} from 'react-spring'
 
 // Components
 import GridCard from './grid-card/gird-card'
@@ -9,6 +10,8 @@ import { Button } from 'shared';
 
 //Mocks
 import { MOCK_GRID_ELEMENTS } from 'mocks/mockGridElements';
+
+const transitions = useTransition()
 
 const Grid = () => {
   const [mockGridElements, setMockGridElements] = useState([]);
