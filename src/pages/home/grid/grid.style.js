@@ -14,9 +14,10 @@ export const GlideSlides = styled.li`
 `
 
 export const GridWrapper = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -28,11 +29,9 @@ export const GridTitle = styled.div`
 `
 
 export const GridCards = styled.div`
-  max-width: 1000px;
-  margin: 3px;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 13px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 `
