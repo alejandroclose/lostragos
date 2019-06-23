@@ -25,12 +25,12 @@ const Grid = () => {
 
     },
     to: {
-      transform: `translate(${showCards}%)`
+      transform: `translate(${showCards}px)`
     }
   })
 
   const handleClick = () => {
-    const plusOne = showCards - 100;
+    const plusOne = showCards - 260;
     setShowCards(plusOne);
   }
 

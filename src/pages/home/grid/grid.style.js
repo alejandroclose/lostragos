@@ -29,8 +29,9 @@ export const GridTitle = styled.div`
 `
 
 export const GridCards = styled.div`
-  max-width: 100%;
+  max-width: 1000px;
   overflow: hidden;
+  touch-action: pan-x;
   margin: 13px;
   display: flex;
   flex-direction: row;

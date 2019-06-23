@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   max-width: 250px !important;
-  margin: 5px 10px 20px 10px;
+  margin: 5px 5px 20px 5px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
