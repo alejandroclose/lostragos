@@ -21,17 +21,16 @@ const Grid = () => {
 
   const slider = useSpring({
     from: {
-      transform: `translate(0%)`
-
+      transform: `translateX(0%)`
     },
     to: {
-      transform: `translate(${showCards}px)`
+      transform: `translateX(${showCards}%)`
     }
   })
 
   const handleClick = () => {
-    const plusOne = showCards - 260;
-    setShowCards(plusOne);
+    const slide = showCards - 75;
+    setShowCards(slide);
   }
 
 
