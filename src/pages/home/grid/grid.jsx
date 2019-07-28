@@ -1,6 +1,6 @@
 // Dependencies
 import React, { useState, useEffect } from 'react';
-import { useSpring, animated } from 'react-spring'
+import Slider from 'react-slick';
 
 // Components
 import GridCard from './grid-card/gird-card'
@@ -19,46 +19,52 @@ const Grid = () => {
     setMockGridElements(MOCK_GRID_ELEMENTS)
   }, [])
 
-  const slider = useSpring({
-    from: {
-      transform: `translateX(0%)`
-    },
-    to: {
-      transform: `translateX(${showCards}%)`
-    }
-  })
-
   const handleClick = () => {
     const slide = showCards - 75;
     setShowCards(slide);
   }
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 3,
+    swipeToSlide: true,
+  };
+
+  const slides = mockGridElements.map((gridElement, index) => {
+    return (
+      <div>
+
+      <StyledLink to={gridElement.fullPath} key={gridElement.id}>
+          <GridCard
+            title={gridElement.title}
+            icon={gridElement.icon}
+            fullPath={gridElement.fullPath}>
+          </GridCard>
+          
+      </StyledLink>
+      </div>
+    )
+  })
 
   return (
+
+    
     <GridWrapper>
       <GridTitle>
         Busca por categorías
         </GridTitle>
-      <GridCards>
-        {
-          mockGridElements.map((gridElement, index) => {
-            return (
 
-              <StyledLink to={gridElement.fullPath} key={gridElement.id}>
-                <animated.div style={slider}>
-                  <GridCard
-                    title={gridElement.title}
-                    icon={gridElement.icon}
-                    fullPath={gridElement.fullPath}>
-                  </GridCard>
-                </animated.div>
-              </StyledLink>
-            )
-          })
-        }
-      </GridCards>
+        <Slider {...settings}>
+        <GridCards>
+        {slides}
+        </GridCards>
+        </Slider>
       <Button onClick={handleClick}></Button>
     </GridWrapper>
+    
   )
 }
 

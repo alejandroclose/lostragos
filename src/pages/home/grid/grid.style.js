@@ -29,14 +29,9 @@ export const GridTitle = styled.div`
 `
 
 export const GridCards = styled.div`
+  width: 250px;
   max-width: 100%;
-  overflow: hidden;
-  overflow-x: scroll;
-  touch-action: pan-x;
   margin: 13px;
   display: flex;
   flex-direction: row;
-  &::-webkit-scrollbar {
-    display: none;
-  }
 `

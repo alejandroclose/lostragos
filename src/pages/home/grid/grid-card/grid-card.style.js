@@ -3,7 +3,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  max-width: 250px !important;
+  width: 250px !important;
   margin: 5px 5px 20px 5px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,6 @@ export const Image = styled.div`
   }
 
 `
-
 export const Text = styled.div`
   height: 50px;
   color: #D02936;
