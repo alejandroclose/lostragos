@@ -1,16 +1,18 @@
 // Dependencies
 import React from 'react';
 
-import { Wrapper, Image, Text } from './grid-card.style'
 
-const GridCard = (props) => (
-  <Wrapper>
-    <Image src={props.icon}/>
-    <Text>
-      {props.title}
-    </Text>
 
-  </Wrapper>
-)
+
+const GridCard = (props) => {
+  
+  console.log(props);
+
+  return (
+    <Wrapper>
+    
+    </Wrapper>
+  )
+}
 
 export default GridCard;

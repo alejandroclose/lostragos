@@ -16,16 +16,7 @@ export const Wrapper = styled.div`
     box-shadow: 0px 0px 1px 0.3px #D02936;
     filter: drop-shadow(0px 0px 0.5px #D02936);
 `
-export const Image = styled.div`
-  width: 200px;
-  height: 150px;
-  background-image: url('${props => props.src}');
-  background-repeat: no-repeat;
-  background-size: 80px 80px;
-  background-position: center;
-  }
-
-`
+export const Image = styled.img``
 export const Text = styled.div`
   height: 50px;
   color: #D02936;

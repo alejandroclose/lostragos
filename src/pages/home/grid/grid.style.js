@@ -14,14 +14,16 @@ export const GlideSlides = styled.li`
 `
 
 export const GridWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  background-color: #f9f6ef;
+  button.slick-prev {
+    left: 25px;
+  }
+  button.slick-next {
+    right: 25px;
+  }
+  .slick-arrow::before {
+    color: black;
+    
+  }
 `
 
 export const GridTitle = styled.div`
@@ -34,4 +36,11 @@ export const GridCards = styled.div`
   margin: 13px;
   display: flex;
   flex-direction: row;
+`
+
+export const GridCard = styled.div`
+  img {
+    width: 25%;
+    margin: 0 auto;
+  }
 `
