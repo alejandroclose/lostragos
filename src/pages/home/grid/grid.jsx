@@ -42,8 +42,8 @@ class Grid extends Component {
               )
             })
           }
-        </GridCards>
         <Button onClick={this.handleClick}>Ver todas las categorías</Button>
+        </GridCards>
       </GridWrapper>
     )
   }
