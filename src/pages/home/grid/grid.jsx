@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 // Components
-import { GridWrapper, GridCards } from './grid.style'
+import { GridWrapper, GridTitle, GridCards } from './grid.style'
 import { Button, Card, StyledLink } from 'shared';
 
 //Mocks
@@ -14,28 +14,19 @@ class Grid extends Component {
     gridItemsLength: 0,
     showCards: 4,
     isGridOpen: false,
-    }
+  }
   componentWillMount = () => {
     this.setState({ mockGridElements: MOCK_GRID_ELEMENTS });
   }
 
-  handleClick = (e) => {
-    if (this.state.showCards > 4) {
-      this.setState({
-        showCards: 4
-      })
-    }
-    else {
-      this.setState({
-        showCards: this.state.gridItemsLength
-      });
-    }
-  }
   render() {
     const { mockGridElements } = this.state;
     this.state.gridItemsLength = mockGridElements.length;
     return (
-      <GridWrapper>
+      <GridWrapper className={this.props.theme}>
+        <GridTitle>
+          <h2>{this.props.title}</h2>
+        </GridTitle>
         <GridCards>
           {
             mockGridElements.slice(0, this.state.showCards).map(gridElement => {
