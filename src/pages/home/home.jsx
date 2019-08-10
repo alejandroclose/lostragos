@@ -10,7 +10,6 @@ export const Home = () => (
   <div>
     <Hero />
       <Carousel/>
-
       <Grid/>
     <section>
       <h1>Section 2</h1>

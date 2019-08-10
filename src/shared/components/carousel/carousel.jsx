@@ -1,37 +1,37 @@
 // Dependencies
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import Slider from "react-slick";
+import { Card } from 'shared';
+
+import { MOCK_CAROUSEL_ELEMENTS } from 'mocks/mockCarouselElements';
 
 import { BackgroundImg } from './carousel.style'
 
 export const Carousel = (props) => {
-    let settings = {
+    const [mockCarouselElements, setMockCarouselElements] = useState(MOCK_CAROUSEL_ELEMENTS);
+    const [carouselSettings, setCarouselSettings] = useState({
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1
-    };
+    })
+    console.log(mockCarouselElements)
     return (
-        <Slider {...settings}>
-            <div>
-                <h3>1</h3>
-            </div>
-            <div>
-                <h3>2</h3>
-            </div>
-            <div>
-                <h3>3</h3>
-            </div>
-            <div>
-                <h3>4</h3>
-            </div>
-            <div>
-                <h3>5</h3>
-            </div>
-            <div>
-                <h3>6</h3>
-            </div>
+        <Slider {...carouselSettings}>
+            {
+                mockCarouselElements.map(carouselElement => {
+                    return (
+                        <Card
+                            title={carouselElement.title}
+                            icon={carouselElement.icon}
+                            fullPath={carouselElement.fullPath}
+                            theme={"red-box"}>
+                        </Card>
+                    )
+                })
+            }
         </Slider>
     )
 };
