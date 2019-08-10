@@ -14,11 +14,12 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border: 2px solid #D02936;
+    border: 2px solid #EA3840;
+    
       
     span {
         height: 50px;
-        color: #D02936;
+        color: #EA3840;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -29,8 +30,8 @@ export const Wrapper = styled.div`
     
     &:hover {
         font-weight: bold;
-        box-shadow: 0px 0px 1px 0.3px #D02936;
-        filter: drop-shadow(0px 0px 0.5px #D02936);
+        box-shadow: 0px 0px 1px 0.3px #EA3840;
+        filter: drop-shadow(0px 0px 0.5px #EA3840);
     }
   }
   
