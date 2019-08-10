@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 // Components
 import GridCard from './grid-card/gird-card'
 import { StyledLink } from '../../../shared/components/'
+import { Card } from '../../../shared/components/card/card.jsx'
 import { GridWrapper, GridCards } from './grid.style'
 import { Button } from 'shared';
 
@@ -43,11 +44,11 @@ class Grid extends Component {
             mockGridElements.slice(0, this.state.showCards).map(gridElement => {
               return (
                 <StyledLink to={gridElement.fullPath} key={gridElement.id}>
-                  <GridCard
+                  <Card
                     title={gridElement.title}
                     icon={gridElement.icon}
                     fullPath={gridElement.fullPath}>
-                  </GridCard>
+                  </Card>
                 </StyledLink>
               )
             })
