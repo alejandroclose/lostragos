@@ -2,11 +2,8 @@
 import React, { Component } from 'react';
 
 // Components
-import GridCard from './grid-card/gird-card'
-import { StyledLink } from '../../../shared/components/'
-import { Card } from '../../../shared/components/card/card.jsx'
 import { GridWrapper, GridCards } from './grid.style'
-import { Button } from 'shared';
+import { Button, Card, StyledLink } from 'shared';
 
 //Mocks
 import { MOCK_GRID_ELEMENTS } from 'mocks/mockGridElements';
@@ -47,7 +44,8 @@ class Grid extends Component {
                   <Card
                     title={gridElement.title}
                     icon={gridElement.icon}
-                    fullPath={gridElement.fullPath}>
+                    fullPath={gridElement.fullPath}
+                    theme={"red-box"}>
                   </Card>
                 </StyledLink>
               )
