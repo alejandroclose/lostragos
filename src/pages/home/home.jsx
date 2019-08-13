@@ -3,12 +3,14 @@ import React from 'react';
 
 // Components
 import Hero from './hero/hero';
+import { Carousel } from 'shared';
 import Grid from './grid/grid';
 
 export const Home = () => (
   <div>
     <Hero />
-    <Grid/>
+      <Carousel/>
+      <Grid/>
     <section>
       <h1>Section 2</h1>
     </section>
