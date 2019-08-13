@@ -22,6 +22,7 @@ class Grid extends Component {
   render() {
     const { mockGridElements } = this.state;
     this.state.gridItemsLength = mockGridElements.length;
+    console.log(mockGridElements );
     return (
       <GridWrapper className={this.props.theme}>
         <GridTitle>
@@ -34,7 +35,7 @@ class Grid extends Component {
                 <StyledLink to={gridElement.fullPath} key={gridElement.id}>
                   <Card
                     title={gridElement.title}
-                    icon={gridElement.icon}
+                    icon={gridElement.image}
                     fullPath={gridElement.fullPath}
                     theme={"red-box"}>
                   </Card>

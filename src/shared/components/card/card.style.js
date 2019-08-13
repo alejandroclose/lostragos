@@ -2,12 +2,13 @@
 
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.article`
   
-  &.picture-box {
-  
+  &.slider-box {
+    margin: 0 auto;
+    max-width: 25vw;
   }
-
+    
   &.red-box {
     max-width: 250px !important;
     margin: 5px 0 20px 0;
@@ -17,7 +18,7 @@ export const Wrapper = styled.div`
     border: 2px solid #EA3840;
     
       
-    span {
+    header {
         height: 50px;
         color: #EA3840;
         display: flex;
@@ -36,7 +37,7 @@ export const Wrapper = styled.div`
   }
   
 `
-export const Image = styled.div`
+export const Image = styled.img`
   width: 200px;
   height: 150px;
   background-image: url('${props => props.src}');
@@ -45,4 +46,14 @@ export const Image = styled.div`
   background-position: center;
 `
 
-export const Text = styled.span``
+export const Icon = styled.div`
+  width: 200px;
+  height: 150px;
+  background-image: url('${props => props.src}');
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  background-position: center;
+`
+
+export const Title = styled.header``
+export const Text = styled.p``

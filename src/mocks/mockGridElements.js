@@ -12,63 +12,63 @@ export const MOCK_GRID_ELEMENTS = [
   {
     id: 1,
     title: 'Smoothies',
-    icon: smoothies,
+    image: smoothies,
     fullPath: '/categorias/smoothies'
   },
   {
     id: 2,
     title: 'Verano',
-    icon: verano,
+    image: verano,
     fullPath: '/categorias/verano'
   },
   {
     id: 3,
     title: 'Clásicos',
-    icon: clasicos,
+    image: clasicos,
     fullPath: '/categorias/clasicos'
 
   },
   {
     id: 4,
     title: 'IBA',
-    icon: iba,
+    image: iba,
     fullPath: '/categorias/clasicos'
 
   },
   {
     id: 5,
     title: 'Románticos',
-    icon: romanticos,
+    image: romanticos,
     fullPath: '/categorias/romanticos'
   },
   {
     id: 6,
     title: 'Populares',
-    icon: populares,
+    image: populares,
     fullPath: '/categorias/populares'
   },
   {
     id: 7,
     title: 'Afrodisiacos',
-    icon: afrodisiacos,
+    image: afrodisiacos,
     fullPath: '/categorias/afrodisiacos'
   },
   {
     id: 8,
     title: '8',
-    icon: afrodisiacos,
+    image: afrodisiacos,
     fullPath: '/categorias/afrodisiacos'
   },
   {
     id: 9,
     title: '9',
-    icon: afrodisiacos,
+    image: afrodisiacos,
     fullPath: '/categorias/afrodisiacos'
   },
   {
     id: 10,
     title: '10',
-    icon: afrodisiacos,
+    image: afrodisiacos,
     fullPath: '/categorias/afrodisiacos'
   }
 ]

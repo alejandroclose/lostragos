@@ -3,11 +3,13 @@ import React from 'react';
 
 // Components
 import Hero from './hero/hero';
+import { Carousel } from 'shared';
 import Grid from './grid/grid';
 
 export const Home = () => (
   <div>
     <Hero />
+    <Carousel/>
     <Grid
       theme={"grid-icons-red"}
       title={"Explora por categorías"}
