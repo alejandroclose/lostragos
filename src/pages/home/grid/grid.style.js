@@ -2,7 +2,15 @@
 import styled from 'styled-components';
 
 export const GridWrapper = styled.div`
-  margin: 10px;
+  padding: 15px;
+  color: #EA3840;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #f9f6ef;
 
 &.grid-icons-red{
   color: #EA3840;
@@ -13,6 +21,10 @@ export const GridWrapper = styled.div`
   text-align: center;
   justify-content: center;
   background-color: #f9f6ef;
+}
+
+&.grid-icons-image{
+
 }
 `
 
