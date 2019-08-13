@@ -19,6 +19,17 @@ export const GridWrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
+  justify-content: space-evenly;
+  background-color: #f9f6ef;
+}
+
+&.grid-images-red{
+  color: #EA3840;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
   justify-content: center;
   background-color: #f9f6ef;
 }
@@ -43,5 +54,12 @@ export const GridCards = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  
+  &.grid-icons-red{
+    justify-content: space-around;
+  }
+
+  &.grid-images-red{
+    justify-content: center;
+  }
 `

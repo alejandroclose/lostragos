@@ -16,9 +16,9 @@ export const Card = (props) => {
     if(props.description != false) description = <Text>{props.description}</Text>;
 
     return (
-        <Wrapper className={props.theme} id={props.id}>
+        <Wrapper className={props.type} id={props.id}>
             { image }
-            <Title>
+            <Title className={props.type}>
                 {props.title}
             </Title>
             { description }

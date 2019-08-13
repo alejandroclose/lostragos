@@ -9,14 +9,23 @@ export const Wrapper = styled.article`
     max-width: 25vw;
   }
     
-  &.red-box {
-    max-width: 250px !important;
+  &.icons {
+    max-width: 250px;
     margin: 5px 0 20px 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     border: 2px solid #EA3840;
+  }
+
+  &.images {
+    width: 250px;
+    margin: 5px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     
+  }
       
     header {
         height: 50px;
@@ -55,5 +64,9 @@ export const Icon = styled.div`
   background-position: center;
 `
 
-export const Title = styled.header``
+export const Title = styled.header`
+  &.images {
+    border: 2px solid #EA3840;
+  }
+`
 export const Text = styled.p``

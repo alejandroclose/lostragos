@@ -1,6 +1,6 @@
 // Grid Elements
 
-const smoothies = require('assets/icons/categories/icono_categorias_smoothie.png');
+const smoothies = require('assets/images/hero-background.jpg');
 const verano = require('assets/icons/categories/icono_categorias_verano.png');
 const clasicos = require('assets/icons/categories/icono_categorias_clasicos.png');
 const iba = require('assets/icons/categories/icono_categoria_iba.png');
