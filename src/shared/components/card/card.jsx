@@ -10,7 +10,7 @@ export const Card = (props) => {
     if(props.seo === true) {
         image = <img src={ image } alt={props.title}/>;
     } else {
-        image = <Icon src={ image }/>;
+        image = <Icon className={props.type}src={ image }/>;
     }
 
     if(props.description != false) description = <Text>{props.description}</Text>;

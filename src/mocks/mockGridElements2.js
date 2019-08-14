@@ -1,9 +1,9 @@
 // Grid Elements
 
-const smoothies = require('assets/images/hero-background.jpg');
-const verano = require('assets/icons/categories/icono_categorias_verano.png');
-const clasicos = require('assets/icons/categories/icono_categorias_clasicos.png');
-const iba = require('assets/icons/categories/icono_categoria_iba.png');
+const smoothies = require('assets/images/sneak navidad_01.jpg');
+const verano = require('assets/images/hero-background3.jpg');
+const clasicos = require('assets/images/hero-background.jpg');
+const iba = require('assets/images/hero-background3.jpg');
 const romanticos = require('assets/icons/categories/icono_categorias_romanticos.png');
 const populares = require('assets/icons/categories/icono_categorias_populares.png');
 const afrodisiacos = require('assets/icons/categories/icono_categorias_afrodisiaco.png');
