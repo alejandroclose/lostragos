@@ -80,6 +80,7 @@ export const Icon = styled.div`
 export const Title = styled.header`
   &.images {
     border: 2px solid #EA3840;
+    border-top: none;
 
   }
 `
