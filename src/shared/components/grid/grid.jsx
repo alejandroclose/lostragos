@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Components
-import { GridWrapper, GridTitle, GridCards,  } from './grid.style'
+import { GridWrapper, GridTitle, GridItems  } from './grid.style'
 import { Button, Card, StyledLink } from 'shared';
 
 const Grid = (props) => {
@@ -12,16 +12,16 @@ const Grid = (props) => {
       <GridTitle>
         <h2>{props.title}</h2>
       </GridTitle>
-      <GridCards className={props.theme}>
+      <GridItems className={props.theme}>
         {
-          props.elements.slice(0, showCards).map(gridElement => {
+          props.items.slice(0, showCards).map(gridItem => {
             return (
               <div className={props.theme}>
-              <StyledLink to={gridElement.fullPath} key={gridElement.id}>
+              <StyledLink to={gridItem.fullPath} key={gridItem.id}>
                 <Card
-                  title={gridElement.title}
-                  icon={gridElement.image}
-                  fullPath={gridElement.fullPath}
+                  title={gridItem.title}
+                  icon={gridItem.image}
+                  fullPath={gridItem.fullPath}
                   type={props.type}>
                 </Card>
               </StyledLink>
@@ -30,7 +30,7 @@ const Grid = (props) => {
           })
         }
         <Button>{props.button}</Button>
-      </GridCards>
+      </GridItems>
     </GridWrapper>
 
   )

@@ -4,31 +4,31 @@ import React, { useState, useEffect } from 'react';
 // Components
 import Hero from './hero/hero';
 import { Carousel } from 'shared';
-import Grid from './grid/grid';
+import Grid from '../../shared/components/grid/grid';
 
 //Mocks
 import { MOCK_GRID_ELEMENTS } from 'mocks/mockGridElements';
 import { MOCK_GRID_ELEMENTS_2 } from 'mocks/mockGridElements2';
 
 export const Home = () => {
-  const [gridElements, setMockGridElements] = useState(MOCK_GRID_ELEMENTS);
-  const [gridElements2, setMockGridElements2] = useState(MOCK_GRID_ELEMENTS_2)
+  const [gridItems, setMockGridItems] = useState(MOCK_GRID_ELEMENTS);
+  const [gridItems2, setMockGridItems2] = useState(MOCK_GRID_ELEMENTS_2)
   return (
     <div>
       <Hero />
       <Carousel />
       <Grid
-        theme={"grid-icons-red"}
+        theme={"grid"}
         title={"Explora por categorías"}
         button={"Ver todas las categorías"}
-        elements={gridElements}
+        items={gridItems}
         type={"icons"}
       />
       <Grid
-        theme={"grid-images-red"}
+        theme={"grid-fluid"}
         title={"Tragos Populares"}
         button={"Ver todas las recetas"}
-        elements={gridElements2}
+        items={gridItems2}
         type={"images"}
       />
       <section>

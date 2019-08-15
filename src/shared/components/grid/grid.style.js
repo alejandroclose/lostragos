@@ -12,7 +12,7 @@ export const GridWrapper = styled.div`
   justify-content: center;
   background-color: #f9f6ef;
 
-&.grid-icons-red{
+&.grid{
   color: #EA3840;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ export const GridWrapper = styled.div`
   background-color: #f9f6ef;
 }
 
-&.grid-images-red{
+&.grid-fluid{
   color: #EA3840;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@ export const GridTitle = styled.div`
   font-size: 1.1rem;
 `
 
-export const GridCards = styled.div`
+export const GridItems = styled.div`
   max-width: 1000px;
   margin: 20px;
   display: flex;
@@ -55,7 +55,7 @@ export const GridCards = styled.div`
   flex-wrap: wrap;
   align-items: center;
   
-  &.grid-icons-red{
+  &.grid{
     justify-content: space-around;
   }
 
