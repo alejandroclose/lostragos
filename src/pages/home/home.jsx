@@ -3,7 +3,7 @@ import React from 'react';
 
 // Components
 import Hero from './hero/hero';
-import { Carousel } from 'shared';
+import { Carousel, Card } from 'shared';
 import Grid from './grid/grid';
 
 export const Home = () => (
@@ -16,6 +16,9 @@ export const Home = () => (
     </section>
     <section>
       <h1>Section 3</h1>
+    </section>
+    <section>
+        <Card />
     </section>
   </div>
 );
