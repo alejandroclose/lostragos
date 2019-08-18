@@ -1,27 +1,19 @@
 // Dependencies
 import React, { useState } from 'react';
 
-import { Wrapper, Image, Icon, Text, Title } from './card.style'
+import { Wrapper } from './card.style'
 
 export const Card = (props) => {
     let image = props.icon;
     let description = props.description;
 
-    if(props.seo === true) {
-        image = <img src={ image } alt={props.title}/>;
-    } else {
-        image = <Icon src={ image }/>;
-    }
-
-    if(props.description != false) description = <Text>{props.description}</Text>;
-
     return (
-        <Wrapper className={props.theme} id={props.id}>
-            { image }
-            <Title>
-                {props.title}
-            </Title>
-            { description }
+        <Wrapper className="card">
+            <img src = "https://fakeimg.pl/320x320/" className = "card-img-top" alt = "..."  />
+            <div className = "card-body" >
+                <p className = "card-text" >foo</p>
+            </div>
         </Wrapper>
-    );
+    )
 };
+
