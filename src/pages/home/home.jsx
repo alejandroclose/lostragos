@@ -24,7 +24,11 @@ export const Home = () => (
         text= {'Some quick example text to build on the card title and make up the bulk of the card\'s content.'}
         cta = { '/tragos/id' }
         ctaText = { 'Call to action' }
-        />
+        list = { ['Cras justo odio', 'Dapibus ac facilisis in', 'Vestibulum at eros'] }
+        >
+            <a href={ '/tragos/id/link'} className="card-link">Card link</a>
+            <a href={ '/tragos/id/anotherlink'} className="card-link">Another link</a>
+        </Card>
     </section>
   </div>
 );
