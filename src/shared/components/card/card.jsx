@@ -1,17 +1,28 @@
 // Dependencies
 import React, { useState } from 'react';
 
-import { Wrapper } from './card.style'
+import { Wrapper, Header } from './card.style'
 
 export const Card = (props) => {
-    let image = props.icon;
-    let description = props.description;
-
+    let image = (props.image) ?
+        <img src={ props.image } className = "card-img-top" alt={props.title}/> :
+        ''
+    let title = (props.title) ?
+        <Header className="card-title"> { props.title }</Header> :
+        ''
+    let text = (props.title) ?
+        <p className = "card-text"> { props.text }</p> :
+        ''
+    let cta = (props.cta && props.ctaText) ?
+        <a href={props.cta} className = "btn btn-primary">{ props.ctaText }</a> :
+        ''
     return (
         <Wrapper className="card">
-            <img src = "https://fakeimg.pl/320x320/" className = "card-img-top" alt = "..."  />
-            <div className = "card-body" >
-                <p className = "card-text" >foo</p>
+            { image }
+            <div className="card-body" >
+                { title }
+                { text }
+                { cta }
             </div>
         </Wrapper>
     )

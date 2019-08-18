@@ -18,7 +18,13 @@ export const Home = () => (
       <h1>Section 3</h1>
     </section>
     <section>
-        <Card />
+        <Card
+        image = {'https://fakeimg.pl/320x320/'}
+        title = {'Card Title'}
+        text= {'Some quick example text to build on the card title and make up the bulk of the card\'s content.'}
+        cta = { '/tragos/id' }
+        ctaText = { 'Call to action' }
+        />
     </section>
   </div>
 );

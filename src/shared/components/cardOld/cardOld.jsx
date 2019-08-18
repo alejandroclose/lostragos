@@ -7,7 +7,7 @@ export const CardOld = (props) => {
     let image = props.icon;
     let description = props.description;
 
-    if(props.seo === true) {
+    if(props.seo) {
         image = <img src={ image } alt={props.title}/>;
     } else {
         image = <Icon src={ image }/>;
