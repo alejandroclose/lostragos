@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 // Components
 import { GridWrapper, GridCards } from './grid.style'
-import { Button, Card, StyledLink } from 'shared';
+import { Button, CardOld, StyledLink } from 'shared';
 
 //Mocks
 import { MOCK_GRID_ELEMENTS } from 'mocks/mockGridElements';
@@ -42,12 +42,12 @@ class Grid extends Component {
             mockGridElements.slice(0, this.state.showCards).map(gridElement => {
               return (
                 <StyledLink to={gridElement.fullPath} key={gridElement.id}>
-                  <Card
+                  <CardOld
                     title={gridElement.title}
                     icon={gridElement.image}
                     fullPath={gridElement.fullPath}
                     theme={"red-box"}>
-                  </Card>
+                  </CardOld>
                 </StyledLink>
               )
             })

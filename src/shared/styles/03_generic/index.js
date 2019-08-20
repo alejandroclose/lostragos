@@ -1,0 +1,2 @@
+
+import './generic.scss';
