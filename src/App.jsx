@@ -6,7 +6,7 @@ import {
   Switch } from 'react-router-dom';
 import ShellMain from './shell/shell-main/shellMain';
 import {
-  Home,
+  Home, Recipe, Recipes, Categories,
   NotFound } from './pages';
 
 // Global styles
@@ -19,6 +19,9 @@ class App extends Component {
         <GlobalStyle />
         <Switch>
           <Route exact path="/" component={ Home } />
+          <Route path='/categorias' component = {Categories} />
+          <Route path='/recetas' component = {Recipes} />
+          <Route path='/receta/:id' component = {Recipe} />
           <Route component={ NotFound } />
         </Switch>
       </ShellMain>
