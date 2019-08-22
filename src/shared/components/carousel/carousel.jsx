@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 import Slider from "react-slick";
-import { Card } from 'shared';
+import { CardOld } from 'shared';
 
 import { MOCK_CAROUSEL_ELEMENTS } from 'mocks/mockCarouselElements';
 
@@ -27,14 +27,14 @@ export const Carousel = (props) => {
                 {
                     mockCarouselElements.map(carouselElement => {
                         return (
-                            <Card key={carouselElement.id}
+                            <CardOld key={carouselElement.id}
                                 title={carouselElement.title}
                                 description={carouselElement.description}
                                 icon={carouselElement.image}
                                 fullPath={carouselElement.fullPath}
                                 type={"slider-box"}
                                 seo={true}>
-                            </Card>
+                            </CardOld>
                         )
                     })
                 }

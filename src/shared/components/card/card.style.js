@@ -3,9 +3,6 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.article`
-  
-  &.slider-box {
-    margin: 0 auto;
     max-width: 25vw;
   }
 
@@ -85,3 +82,4 @@ export const Title = styled.header`
   }
 `
 export const Text = styled.p``
+export const Header = styled.header``

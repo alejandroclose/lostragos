@@ -4,3 +4,4 @@ export * from './styledLink';
 export * from './card';
 export * from './carousel';
 export * from './grid';
+export * from './cardOld';
