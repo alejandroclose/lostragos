@@ -49,7 +49,7 @@ export const GridTitle = styled.div`
 
 export const GridItems = styled.div`
   max-width: 1000px;
-  margin: 20px;
+  margin: 20px 20px 0px 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

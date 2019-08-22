@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 // Components
 import Hero from './hero/hero';
-import { Carousel } from 'shared';
-import Grid from '../../shared/components/grid/grid';
+import { Carousel, Grid } from 'shared';
 
 //Mocks
 import { MOCK_GRID_ELEMENTS } from 'mocks/mockGridElements';

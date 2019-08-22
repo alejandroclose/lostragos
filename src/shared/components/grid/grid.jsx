@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { GridWrapper, GridTitle, GridItems  } from './grid.style'
 import { Button, Card, StyledLink } from 'shared';
 
-const Grid = (props) => {
+export const Grid = (props) => {
   const [showCards, setShotCards] = useState(4);
   return (
     <GridWrapper >
@@ -29,11 +29,9 @@ const Grid = (props) => {
             )
           })
         }
-        <Button>{props.button}</Button>
       </GridItems>
+        <Button>{props.button}</Button>
     </GridWrapper>
 
   )
 };
-
-export default Grid;
