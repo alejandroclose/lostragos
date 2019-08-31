@@ -3,7 +3,7 @@
 const THEME = {
   color: {
     shared: {
-      highlight: '#D02936',
+      highlight: '#EA3840',
       highlightHover: '#F24B58'
     },
     header: {

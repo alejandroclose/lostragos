@@ -32,7 +32,7 @@ export const Carousel = (props) => {
                                 description={carouselElement.description}
                                 icon={carouselElement.image}
                                 fullPath={carouselElement.fullPath}
-                                theme={"slider-box"}
+                                type={"slider-box"}
                                 seo={true}>
                             </CardOld>
                         )
